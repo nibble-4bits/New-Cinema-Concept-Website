@@ -13,7 +13,7 @@ CREATE TABLE Usuario(
 	Username NVARCHAR(200) NOT NULL UNIQUE,
 	[Password] NVARCHAR(200) NOT NULL,
 	Tipo TINYINT NOT NULL DEFAULT 1, -- 0 admin, 1 comun, 2 gold, 3 platinum
-	FechaNacimiento DATE NOT NULL,
+	FechaNacimiento DATE NOT NULL
 )
 GO
 
@@ -61,7 +61,7 @@ CREATE TABLE Proyectable(
 	Titulo NVARCHAR(100) NOT NULL,
 	Duracion TIME NOT NULL,
 	Sinopsis NVARCHAR(500) NOT NULL,
-	Estatus TINYINT NOT NULL DEFAULT 0 -- 0 cartelera(normal), 1 estreno, 2 preventa
+	Estatus TINYINT NOT NULL DEFAULT 0 -- 0 baja, 1 cartelera(normal), 2 estreno, 3 preventa
 )
 GO
 
@@ -86,6 +86,7 @@ GO
 
 CREATE TABLE Serie(
 	Id INT PRIMARY KEY IDENTITY(1,1),
+	Nombre NVARCHAR(200) NOT NULL,
 	Clasificacion NVARCHAR(5) NOT NULL,
 	Genero NVARCHAR(50) NOT NULL,
 	Reparto NVARCHAR(300) NOT NULL
@@ -105,5 +106,12 @@ CREATE TABLE Pelicula(
 	Clasificacion NVARCHAR(5) NOT NULL,
 	Genero NVARCHAR(50) NOT NULL,
 	Reparto NVARCHAR(300) NOT NULL
+)
+GO
+
+-- Tipos de dato personalizados
+CREATE TYPE Producto_Pedido_Tipo AS TABLE(
+	IdProducto INT,
+	Cantidad INT
 )
 GO
