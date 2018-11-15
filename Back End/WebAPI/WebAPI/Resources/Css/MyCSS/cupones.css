@@ -1,0 +1,30 @@
+.child-cupones {
+    flex: 1 0 23%;
+    margin: 1%;
+    height: 250px;
+    background-color: #7f7f9659;
+    border-radius: 10px;
+}
+img.imageContainer-cupones{
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+span.justify-content-center{
+    font-size: 11px;
+    text-align: justify;
+    padding: 10px;
+}
+.flex-item-cupones{
+    display: flex;
+    align-items: start;
+    padding: 10px 10px 10px 10px;
+}
+.btn-cupon{
+  display: flex;
+  flex: 1 0 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
