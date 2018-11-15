@@ -94,7 +94,46 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Css\Animate\animate.css" />
+    <Content Include="Resources\Css\BootStrap\bootstrap-grid.css" />
+    <Content Include="Resources\Css\BootStrap\bootstrap-grid.min.css" />
+    <Content Include="Resources\Css\BootStrap\bootstrap-reboot.css" />
+    <Content Include="Resources\Css\BootStrap\bootstrap-reboot.min.css" />
+    <Content Include="Resources\Css\BootStrap\bootstrap.css" />
+    <Content Include="Resources\Css\BootStrap\bootstrap.min.css" />
+    <Content Include="Resources\Css\MyCSS\cartelera.css" />
+    <Content Include="Resources\Css\MyCSS\cupones.css" />
+    <Content Include="Resources\Css\MyCSS\historial.css" />
+    <Content Include="Resources\Css\MyCSS\Index.css" />
+    <Content Include="Resources\Css\MyCSS\leftBarAdmin.css" />
+    <Content Include="Resources\Css\MyCSS\leftBarUser.css" />
+    <Content Include="Resources\Css\MyCSS\modalSession.css" />
+    <Content Include="Resources\Css\MyCSS\ticket.css" />
     <Content Include="Global.asax" />
+    <Content Include="Resources\Js\Angular\angular-idle.js" />
+    <Content Include="Resources\Js\Angular\angular-route.js" />
+    <Content Include="Resources\Js\Angular\angular.js" />
+    <Content Include="Resources\Js\Aniview\jquery-aniview-master\dist\jquery.aniview.js" />
+    <Content Include="Resources\Js\JQuery\jquery-3.3.1.min.js" />
+    <Content Include="Resources\Js\MyJS\AdminApp\Controller\AdminController.js" />
+    <Content Include="Resources\Js\MyJS\IndexApp\Controller\IndexController.js" />
+    <Content Include="Resources\Js\MyJS\AdminApp\MyAppAdminIndex.js" />
+    <Content Include="Resources\Js\MyJS\IndexApp\MyAppIndex.js" />
+    <Content Include="Resources\Js\MyJS\UserApp\Controller\UserController.js" />
+    <Content Include="Resources\Js\MyJS\UserApp\MyAppUserIndex.js" />
+    <Content Include="Resources\Js\MyJS\NavBar.js" />
+    <Content Include="Views\admin\adminIndex.html" />
+    <Content Include="Views\admin\AdminIndexMain.html" />
+    <Content Include="Views\index\index.html" />
+    <Content Include="Views\index\indexMain.html" />
+    <Content Include="Views\user\cartelera.html" />
+    <Content Include="Views\user\cupones.html" />
+    <Content Include="Views\user\historial.html" />
+    <Content Include="Views\admin\leftBarAdmin.html" />
+    <Content Include="Views\user\leftBarUser.html" />
+    <Content Include="Views\user\pedidos.html" />
+    <Content Include="Views\user\ticket.html" />
+    <Content Include="Views\user\userIndex.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +146,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Js\Aniview\jquery-aniview-master\LICENSE" />
+    <Content Include="Resources\Js\Aniview\jquery-aniview-master\package.json" />
+    <Content Include="Resources\Js\Aniview\jquery-aniview-master\README.md" />
+    <Content Include="Resources\Css\BootStrap\.DS_Store" />
+    <Content Include="Resources\Css\BootStrap\bootstrap-grid.css.map" />
+    <Content Include="Resources\Css\BootStrap\bootstrap-grid.min.css.map" />
+    <Content Include="Resources\Css\BootStrap\bootstrap-reboot.css.map" />
+    <Content Include="Resources\Css\BootStrap\bootstrap-reboot.min.css.map" />
+    <Content Include="Resources\Css\BootStrap\bootstrap.css.map" />
+    <Content Include="Resources\Css\BootStrap\bootstrap.min.css.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
