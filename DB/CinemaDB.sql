@@ -61,10 +61,10 @@ CREATE TABLE Proyectable(
 	Titulo NVARCHAR(100) NOT NULL,
 	Duracion TIME NOT NULL,
 	Sinopsis NVARCHAR(500) NOT NULL,
+	RutaImagen NVARCHAR(300) NOT NULL,
 	Estatus TINYINT NOT NULL DEFAULT 0 -- 0 baja, 1 cartelera(normal), 2 estreno, 3 preventa
 )
 GO
-
 
 CREATE TABLE Funcion(
 	Id INT PRIMARY KEY IDENTITY(1,1),
