@@ -12,10 +12,12 @@ using WebAPI.Util;
 
 namespace WebAPI.Controllers
 {
+    [Authorize]
     public class UserController : ApiController
     {
         // POST: api/User
         [HttpPost]
+        [AllowAnonymous]
         public IHttpActionResult RegistrarUsuario([FromBody]Usuario usuario)
         {
             IDatabaseConnection conn = new SqlServerConnection();
