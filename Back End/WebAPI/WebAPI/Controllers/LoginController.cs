@@ -34,11 +34,12 @@ namespace WebAPI.Controllers
                 {
                     if (usuario.Username.Equals(reader["Username"].ToString()))
                     {
-                        return Ok();
+                        string token = TokenGenerator.GenerateTokenJwt(usuario.Username);
+                        return Ok(token); // http status 200
                     }
                 }
 
-                return NotFound();
+                return NotFound(); // http status 404
             }
             catch (Exception ex)
             {
