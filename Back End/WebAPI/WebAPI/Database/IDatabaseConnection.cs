@@ -5,19 +5,18 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAPI.Util;
 
 namespace WebAPI.Database
 {
-    interface IDatabaseConnection
+    public interface IDatabaseConnection
     {
         void Open();
 
         void Close();
 
-        void PrepareStoredProc(string StoredProcName, List<SqlParameter> StoredProcParams);
+        DataTableReader ExecuteQuerySP(StoredProcedure procedure);
 
-        DataTableReader ExecuteQuery();
-
-        int ExecuteNonQuery();
+        int ExecuteNonQuerySP(StoredProcedure procedure);
     }
 }

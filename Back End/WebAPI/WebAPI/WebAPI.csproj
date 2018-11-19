@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebAPI</RootNamespace>
     <AssemblyName>WebAPI</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,10 +66,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -113,6 +110,7 @@
     <Content Include="Resources\Icons\IcoMoon\demo.css" />
     <Content Include="Resources\Icons\IcoMoon\liga.js" />
     <Content Include="Resources\Icons\MyIcons\MyIcons.css" />
+    <Content Include="Resources\Img\Png\User\user.png" />
     <Content Include="Resources\Js\Angular\angular-idle.js" />
     <Content Include="Resources\Js\Angular\angular-route.js" />
     <Content Include="Resources\Js\Angular\angular.js" />
@@ -172,6 +170,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Resources\Img\Jpg\Admin\" />
+    <Folder Include="Resources\Img\Jpg\Index\" />
+    <Folder Include="Resources\Img\Jpg\User\" />
+    <Folder Include="Resources\Img\Png\Admin\" />
+    <Folder Include="Resources\Img\Png\Index\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
