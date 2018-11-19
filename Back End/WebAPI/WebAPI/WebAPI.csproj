@@ -107,9 +107,6 @@
     <Content Include="Resources\Css\MyCSS\modalSession.css" />
     <Content Include="Resources\Css\MyCSS\ticket.css" />
     <Content Include="Global.asax" />
-    <Content Include="Resources\Icons\IcoMoon\demo.css" />
-    <Content Include="Resources\Icons\IcoMoon\liga.js" />
-    <Content Include="Resources\Icons\MyIcons\MyIcons.css" />
     <Content Include="Resources\Img\Png\User\user.png" />
     <Content Include="Resources\Js\Angular\angular-idle.js" />
     <Content Include="Resources\Js\Angular\angular-route.js" />
