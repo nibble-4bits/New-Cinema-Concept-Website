@@ -110,6 +110,9 @@
     <Content Include="Resources\Css\MyCSS\modalSession.css" />
     <Content Include="Resources\Css\MyCSS\ticket.css" />
     <Content Include="Global.asax" />
+    <Content Include="Resources\Icons\IcoMoon\demo.css" />
+    <Content Include="Resources\Icons\IcoMoon\liga.js" />
+    <Content Include="Resources\Icons\MyIcons\MyIcons.css" />
     <Content Include="Resources\Js\Angular\angular-idle.js" />
     <Content Include="Resources\Js\Angular\angular-route.js" />
     <Content Include="Resources\Js\Angular\angular.js" />
@@ -157,6 +160,8 @@
     <Content Include="Resources\Css\BootStrap\bootstrap.css.map" />
     <Content Include="Resources\Css\BootStrap\bootstrap.min.css.map" />
     <None Include="packages.config" />
+    <Content Include="Resources\Icons\IcoMoon\IcoMoon-Free.ttf" />
+    <Content Include="Resources\Icons\MyIcons\myfont.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

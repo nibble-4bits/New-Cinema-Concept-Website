@@ -1,0 +1,31 @@
+﻿
+@font-face {
+    font-family: 'MyIcons';
+    src: url('../MyIcons/Myfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.demo-icon {
+    font-family: "MyIcons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-right: 20px;
+}
+.icon-comedy:before {
+    content: '\e800';
+}
