@@ -7,13 +7,6 @@ $(document).ready(function () {
     container = $("#wrapper");
     modal1 = $("#id01");
     modal2 = $("#id02");
-    $('.aniview').AniView();
-    var options = {
-        animateThreshold: 100,
-        scrollPollInterval: 20
-    };
-    $('.aniview').AniView(options);
-    AOS.init();
 });
 $(document).mouseup(function(e) 
 {

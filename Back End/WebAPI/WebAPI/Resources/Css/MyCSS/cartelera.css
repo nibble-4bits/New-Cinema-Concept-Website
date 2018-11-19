@@ -2,10 +2,6 @@
     display: flex;
     flex-wrap: wrap;
 }
-.cbs{
-    min-height: 72%;
-    background-color: #ffffff4f;
-} 
 .child {
     flex: 1 0 21%; /* explanation below */
     margin: 5%;

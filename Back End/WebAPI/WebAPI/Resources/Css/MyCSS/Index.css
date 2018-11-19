@@ -2,6 +2,9 @@
 html {
     height: 100%;
 }
+.cbs {
+    min-height: 98%;
+} 
 .fast {
     -vendor-animation-duration: 1s;
     -vendor-animation-delay: 0s;
@@ -128,10 +131,10 @@ ul {
     overflow-y: auto;
     overflow-x: hidden;
     background: #4D0C46;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -267,9 +270,4 @@ ul {
 }
 .footer-Icons {
     font-size: 28px;
-}
-/*Animations*/
-body[data-aos-duration='225'] [data-aos],
-[data-aos][data-aos][data-aos-duration='225'] {
-    transition-duration: 225ms;
 }
