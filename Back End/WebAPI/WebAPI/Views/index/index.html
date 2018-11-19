@@ -3,6 +3,7 @@
 <head>
     <title>Cineries</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--BootStrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../../Resources/Css/BootStrap/bootstrap.css" crossorigin="anonymous">
@@ -18,6 +19,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--Jquery JS-->
     <script src="../../Resources/Js/JQuery/jquery-3.3.1.min.js"></script>
     <!--Animate JS-->
@@ -29,27 +31,28 @@
     <script src="../../Resources/Js/MyJS/NavBar.js"></script>
     <script src="../../Resources/Js/MyJS/IndexApp/MyAppIndex.js"></script>
     <script src="../../Resources/Js/MyJS/IndexApp/Controller/IndexController.js"></script>
+
 </head>
 <body class="background">
     <section id="LoginModals">
         <div id="id01" class="modal">
             <form class="modal-content animate">
                 <div class="imgcontainer">
-                    <img src="" alt="Avatar" class="avatar">
+                    <img src="../../Resources/Img/Png/User/user.png" alt="Avatar" class="avatar">
                 </div>
-    
+
                 <div class="container">
                     <label for="uname"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="uname" id="txtUserName" required>
-    
+
                     <label for="psw"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" id="txtPassword" required>
-    
-                    <button  id="btnLogin">Login</button>
+
+                    <button id="btnLogin" class="btn btn-outline-primary btn-lg">Login</button>
                 </div>
-    
+
                 <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="RemoveModal1()" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="RemoveModal1()" class="btn btn-outline-danger btn-lg">Cancel</button>
                     <span class="psw">Forgot <a>password?</a></span>
                 </div>
             </form>
@@ -57,7 +60,7 @@
         <div id="id02" class="modal">
             <form class="modal-content animate">
                 <div class="imgcontainer">
-                    <img src="" alt="Avatar" class="avatar">
+                    <img src="../../Resources/Img/Png/User/user.png" alt="Avatar" class="avatar">
                 </div>
                 <div class="container">
                     <label for="uname"><b>Nombre</b></label>
@@ -74,10 +77,10 @@
                     <input type="password" placeholder="Ingresar Contraseña" name="pswrd" id="txtPass" required>
                     <label for="uDob"><b>Fecha de Nacimiento</b></label>
                     <input type="text" placeholder="Ingrese fecha de nacimiento" name="uDob" id="txtDOB" required>
-                    <button  id="btnLogin">Registrarse</button>
+                    <button id="btnRegistrar" class="btn btn-outline-primary btn-lg">Registrarse</button>
                 </div>
                 <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="RemoveModal2()" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="RemoveModal2()" class="btn btn-outline-danger btn-lg">Cancel</button>
                 </div>
             </form>
         </div>
@@ -85,24 +88,24 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-expand-xl bg-PurpleNav navbar-fixed-top">
             <div class="navbar-brand">
-			    <a>LOGO</a>
-			</div>
-			<div class="collapse navbar-collapse">
-				<div class="navbar-nav ml-auto">
-					<a class="nav-item nav-link active" onclick="FirstModal()">Iniciar Sesion</a>
-					<a class="nav-item nav-link active" onclick="SecondModal()">Registrarme</a>
-				</div>
-			</div>
+                <a>LOGO</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" onclick="FirstModal()">Iniciar Sesion</a>
+                    <a class="nav-item nav-link active" onclick="SecondModal()">Registrarme</a>
+                </div>
+            </div>
         </nav>
     </header>
-    
+
     <main>
-        <br/>
+        <br />
         <div ng-app="myApp" style="background-color:white">
-            <div ng-view> 
+            <div ng-view>
             </div>
         </div>
-        <br/>
+        <br />
     </main>
     <footer>
         <div class="footer">
