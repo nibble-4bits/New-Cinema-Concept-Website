@@ -7,6 +7,10 @@ CREATE PROCEDURE dbo.sp_ComprarBoletos
 AS
 	INSERT INTO Usuario_Funcion(IdUsuario, IdFuncion, Cantidad, FechaCompra)
 	VALUES(@IdUsuario, @IdFuncion, @Cantidad, GETDATE())
+
+	SELECT *
+	FROM Usuario_Funcion
+	WHERE Id = (SELECT MAX(Id) FROM Usuario_Funcion)
 GO
 
 CREATE PROCEDURE dbo.sp_ObtenerAsientosDisponibles
