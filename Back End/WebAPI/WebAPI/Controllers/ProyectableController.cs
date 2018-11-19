@@ -73,7 +73,7 @@ namespace WebAPI.Controllers
             {
                 conn.Open();
 
-                DataTableReader reader = conn.ExecuteQuerySP(new StoredProcedure("dbo.sp_ObtenerPeliculas"));
+                DataTableReader reader = conn.ExecuteQuerySP(new StoredProcedure("dbo.sp_ObtenerEpisodios"));
 
                 while (reader.Read())
                 {
@@ -98,7 +98,7 @@ namespace WebAPI.Controllers
 
                     episodios.Add(new Episodio()
                     {
-                        Id = int.Parse(reader["IdPelicula"].ToString()),
+                        Id = int.Parse(reader["IdEpisodio"].ToString()),
                         Serie = serie,
                         Proyectable = proyectable
                     });
