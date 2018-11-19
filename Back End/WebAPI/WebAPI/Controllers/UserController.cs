@@ -56,7 +56,8 @@ namespace WebAPI.Controllers
         }
 
         // PUT: api/User
-        public IHttpActionResult Put([FromBody]Usuario usuario)
+        [HttpPut]
+        public IHttpActionResult ActualizarDatos([FromBody]Usuario usuario)
         {
             IDatabaseConnection conn = new SqlServerConnection();
             List<SqlParameter> parameters = new List<SqlParameter>();
@@ -74,7 +75,7 @@ namespace WebAPI.Controllers
 
                 conn.ExecuteNonQuerySP(new StoredProcedure("dbo.sp_ActualizarUsuario", parameters));
 
-                return Ok(usuario);
+                return Ok();
             }
             catch (Exception ex)
             {
