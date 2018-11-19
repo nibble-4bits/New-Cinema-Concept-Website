@@ -1,7 +1,7 @@
 USE Cinema
 GO
 
-CREATE PROCEDURE dbo.sp_InsertarPedido
+CREATE PROCEDURE dbo.sp_ObtenerPedidosIdUsuario
 @IdUsuario INT
 AS
 	-- Se retorna todo el pedido, con su detalle de pedido y los productos del detalle
