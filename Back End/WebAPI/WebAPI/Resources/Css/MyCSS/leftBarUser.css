@@ -88,3 +88,21 @@
     margin-top: 30%;
     margin-bottom: 0px
 }
+.TitleLeftBar {
+    text-align: center;
+}
+.IconLeftBar {
+    margin-left: -15%;
+    text-align: center;
+}
+a.IconLeftBar {
+    width:100%;
+}
+a.final-bottom {
+    padding: 5% 0;
+}
+.siderbar-Leave {
+    border-top: 1px solid #ffffff;
+    margin-top: 50%;
+    margin-bottom: 0px
+}

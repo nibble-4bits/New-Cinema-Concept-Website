@@ -155,6 +155,8 @@
     <Content Include="Resources\Css\BootStrap\bootstrap.css.map" />
     <Content Include="Resources\Css\BootStrap\bootstrap.min.css.map" />
     <None Include="packages.config" />
+    <Content Include="Resources\Icons\IcoMoon\IcoMoon-Free.ttf" />
+    <Content Include="Resources\Icons\MyIcons\myfont.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

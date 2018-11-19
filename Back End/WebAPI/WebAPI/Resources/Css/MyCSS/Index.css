@@ -2,6 +2,23 @@
 html {
     height: 100%;
 }
+.cbs {
+    min-height: 98%;
+} 
+.fast {
+    -vendor-animation-duration: 1s;
+    -vendor-animation-delay: 0s;
+}
+
+.slow {
+    -vendor-animation-duration: 3s;
+    -vendor-animation-delay: 1s;
+}
+
+.reallyslow {
+    -vendor-animation-duration: 6s;
+    -vendor-animation-delay: 3s;
+}
 body{
     font-size: 20px;
     /*font-family: 'Roboto', sans-serif;*/
@@ -17,8 +34,12 @@ body{
     flex-direction: column;
     background-color: #000000;
 }
-a:hover{
+a:hover {
     cursor: pointer !important;
+    color: #FED731 !important;
+}
+a.hoverWhiteNavBar:hover{
+    color: white !important;
 }
 main{
     flex: 1;
@@ -31,9 +52,11 @@ li{
 p.underline{
     font-size: 20px;
 }
-ul{
+ul {
     margin-left: -20%;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 .black-underline{
     border-bottom-color: #000000!important;
@@ -46,6 +69,9 @@ ul{
     margin-left: -15px;
 }
 /*Head Navbar*/
+.three-lines {
+    color: white;
+}
 @media (max-width: 767px) {
     .navbar-nav > li > a {
     line-height: 20px;
@@ -57,7 +83,15 @@ ul{
     color: #FED731;
 }
 .navbar-fixed-top {
-    font-size: 17px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.navbar-fixed-top-edited {
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 
 .navbar-nav > li > a {
@@ -65,6 +99,7 @@ ul{
     padding-bottom: 0px;
     line-height: 80px;
 }
+
 /*BODY*/
 .ticket-body{
     border-radius: 15px;
@@ -72,7 +107,7 @@ ul{
 }
 /* LEFT NAVBAR*/
 .changeColor{
-    opacity: 0.8;
+    opacity: 0.5;
 }
 #wrapper {
     padding-left: 0;
@@ -96,10 +131,10 @@ ul{
     overflow-y: auto;
     overflow-x: hidden;
     background: #4D0C46;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -204,10 +239,7 @@ ul{
     color: #FED731 !important;
     font-size: 30px !important;
 }
-.siderbar-Leave{
-    margin-top: 120%;
-    margin-bottom: 0px
-}
+
 /*FOOTER*/
 .footer {
     font-family: 'Roboto', sans-serif;
@@ -223,12 +255,19 @@ ul{
 }
 .underline{
     border-bottom: 1px solid #FED731;
-    margin-right: 10%;
-    margin-left: 10%;
 }
+.footer-content {
+    min-width: 20%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
 .centerMargin{
     margin: auto;
 }
 .row{
     padding: 30px;
+}
+.footer-Icons {
+    font-size: 28px;
 }
