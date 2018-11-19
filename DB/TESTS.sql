@@ -6,6 +6,10 @@ EXEC dbo.sp_RegistrarUsuario 'Luis Andrés', 'De Anda', 'Cuéllar', 'ldeanda@gmail
 EXEC dbo.sp_RegistrarUsuario 'Jorge Arturo', 'Rangel', 'Luna', 'jarangel@gmail.com', 'elYorch', 'supass', '1999-03-11'
 GO
 
+-- Tickets
+EXEC dbo.sp_CreateTicket 2, 'Insecto en las palomitas', 'Calidad', 'Me aparecieron unas cucarachas en mis palomitas con extra mantequilla'
+GO
+
 -- Productos
 INSERT INTO Producto(Nombre, PrecioUnitario)
 			VALUES('Palomitas chicas', 37.99),
