@@ -11,6 +11,6 @@ namespace WebAPI.Models
         public Usuario Usuario { get; set; }
         public decimal PrecioTotal { get; set; }
         public DateTime FechaCompra { get; set; }
-        public List<Producto> Productos { get; set; }
+        public List<Producto_Pedido> Producto_Pedido { get; set; }
     }
 }
