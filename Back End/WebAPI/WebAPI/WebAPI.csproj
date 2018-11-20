@@ -125,6 +125,7 @@
     <Content Include="Resources\Js\MyJS\NavBar.js" />
     <Content Include="Views\admin\adminIndex.html" />
     <Content Include="Views\admin\AdminIndexMain.html" />
+    <Content Include="Views\admin\reportes.html" />
     <Content Include="Views\index\index.html" />
     <Content Include="Views\index\indexMain.html" />
     <Content Include="Views\user\cartelera.html" />
