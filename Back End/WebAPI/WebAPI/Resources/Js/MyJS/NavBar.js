@@ -1,20 +1,21 @@
 var container;
 var modal1;
 var modal2;
-$(document).ready(function(){
+
+
+$(document).ready(function () {
     container = $("#wrapper");
     modal1 = $("#id01");
     modal2 = $("#id02");
-})
+});
 $(document).mouseup(function(e) 
 {
 
-    if (!container.is(e.target) && container.has(e.target).length === 0) 
-    {
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
         container.removeClass("toggled");
-        $("header").removeClass("changeColor");
         $("main").removeClass("changeColor");
         $("footer").removeClass("changeColor");
+        $("header").removeClass("changeColor zoomOut animated");
     }
     if (modal1.is(e.target) && modal1.hasClass("modalblock")) 
     {
@@ -25,22 +26,22 @@ $(document).mouseup(function(e)
         RemoveModal2();
     }
 });
-ShowActions = function(){
+ShowActions = function () {
     container.toggleClass("toggled");
-    $("header").toggleClass("changeColor");
+    $("header").toggleClass("zoomOut changeColor animated");
     $("main").toggleClass("changeColor");
     $("footer").toggleClass("changeColor");
-}
-FirstModal = function(){
+};
+FirstModal = function () {
     modal1.toggleClass("modalblock");
-}
-SecondModal = function(){
+};
+SecondModal = function () {
     modal2.toggleClass("modalblock");
-}
+};
 
-RemoveModal1 = function(){
+RemoveModal1 = function () {
     modal1.removeClass("modalblock");
-}
-RemoveModal2 = function(){
+};
+RemoveModal2 = function () {
     modal2.removeClass("modalblock");
-}
+};

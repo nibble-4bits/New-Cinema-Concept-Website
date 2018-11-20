@@ -15,5 +15,8 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
     }).when('/ticket', { //Routing for add employee
         templateUrl: '../../../../Views/user/ticket.html',
         controller: 'UserController'
+    }).when('/configuration', { //Routing for add employee
+        templateUrl: '../../../../Views/user/configuracion.html',
+        controller: 'UserController'
     });
 }]);

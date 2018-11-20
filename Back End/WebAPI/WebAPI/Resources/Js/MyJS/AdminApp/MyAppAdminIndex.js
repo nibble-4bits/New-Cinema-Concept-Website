@@ -3,5 +3,11 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
     $routeProvider.when('/', { //Routing for show list of employee
         templateUrl: '../../../../Views/admin/AdminIndexMain.html',
         controller: 'AdminController'
+    }).when('/inicio', { //Routing for add employee
+        templateUrl: '../../../../Views/admin/AdminIndexMain.html',
+        controller: 'UserController'
+    }).when('/reportes', { //Routing for add employee
+        templateUrl: '../../../../Views/admin/reportes.html',
+        controller: 'UserController'
     });
 }]);

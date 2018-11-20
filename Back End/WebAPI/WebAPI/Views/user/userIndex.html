@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../../Resources/Css/BootStrap/bootstrap.css" crossorigin="anonymous">
     <!--Animate CS-->
-    <link rel="stylesheet" href="../../Resources/Css/Animate/animate.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../Resources/Css/Animate/animate.css">
     <!--CSS Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -34,6 +34,13 @@
     <script src="../../Resources/Js/MyJS/NavBar.js"></script>
     <script src="../../Resources/Js/MyJS/UserApp/MyAppUserIndex.js"></script>
     <script src="../../Resources/Js/MyJS/UserApp/Controller/UserController.js"></script>
+    <!--Personal Icons-->
+    <link rel="stylesheet" href="../../Resources/Icons/MyIcons/MyIcons.css">
+    <!--IcoMoon-->
+    <link rel="stylesheet" href="../../Resources/Icons/IcoMoon/demo.css">
+    <script src="../../Resources/Icons/IcoMoon/liga.js"></script>
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="background">
     <section id="actions">
@@ -41,30 +48,30 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand sidebar-Title">
-                        <a href="#">
+                        <a href="#" class="TitleLeftBar">
                             Nick
                         </a>
                     </li>
                     <li class="sidebar-content">
-                        <a href="#!">Inicio</a>
+                        <a title="Cartelera" href="#!" class="IconLeftBar"><span class="demo-icon icon-comedy"></span>Cartelera</a>
                     </li>
                     <li class="sidebar-content">
-                        <a href="#!cupones">Cupones</a>
+                        <a title="Cupones" href="#!cupones" class="IconLeftBar"><span class="icon icon-price-tag"></span>Cupones</a>
                     </li>
                     <li class="sidebar-content">
-                        <a href="#!pedidos">Pedidos</a>
+                        <a title="Pedidos" href="#!pedidos" class="IconLeftBar"><span class="icon icon-cart"></span>Pedidos</a>
                     </li>
                     <li class="sidebar-content">
-                        <a href="#!historial">Historial</a>
+                        <a title="Historial" href="#!historial" class="IconLeftBar"><span class="icon icon-file-text2"></span>Historial</a>
                     </li>
                     <li class="sidebar-content">
-                        <a href="#!ticket">Ticket</a>
+                        <a title="Reportar" href="#!ticket" class="IconLeftBar"><span class="icon icon-bullhorn"></span>Reportes</a>
                     </li>
                     <li class="sidebar-content">
-                        <a href="#">Configuración</a>
+                        <a title="Configuración" href="#" class="IconLeftBar"><span class="icon icon-cog"></span> Configuración</a>
                     </li>
                     <li class="siderbar-Leave">
-                        <a href="#">Salir</a>
+                        <a title="Cerrar Sesión" href="#" class="IconLeftBar final-bottom"><span class="icon icon-switch"></span> Desconectarme</a>
                     </li>
                 </ul>
             </div>
@@ -73,13 +80,13 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-expand-xl bg-PurpleNav navbar-fixed-top">
             <div class="navbar-brand">
-                <a onclick="ShowActions()" class="btn" id="menu-toggle">Lines</a>
+                <a onclick="ShowActions()" class="btn" id="menu-toggle"><i class="material-icons three-lines">menu</i></a>
                 <a>LOGO</a>
             </div>
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link active" onclick="">Cartelera</a>
-                    <a class="nav-item nav-link active" onclick="">Cerrar Sesion</a>
+                    <a title="Cartelera" class="nav-item nav-link active hoverWhiteNavBar" onclick=""><span class="demo-icon icon-comedy"></span>Cartelera</a>
+                    <a title="Cerrar Sesión" class="nav-item nav-link active hoverWhiteNavBar" onclick=""><span class="icon icon-exit"></span>Cerrar Sesion</a>
                 </div>
             </div>
         </nav>
@@ -94,35 +101,41 @@
     </main>
     <footer>
         <div class="footer">
-            <div class="col-2 centerMargin">
+            <div class="centerMargin" data-aos="flip-down">
                 <h1>Logo</h1>
             </div>
-            <div class="col-1 verticalLine">
+            <div class="verticalLine">
             </div>
-            <div class="col-2">
+            <div class="footer-content"  data-aos="zoom-in">
                 <p class="underline">Soporte</p>
                 <ul>
-                    <li>Dirección: Salle Bajio</li>
-                    <li>Teléfono: 477-290-5369</li>
+                    <li title="Dirección">Dirección: Salle Bajio</li>
+                    <li title="Teléfono">Teléfono: 477-290-5369</li>
                 </ul>
             </div>
-            <div class="col-2">
+            <div class="footer-content"  data-aos="zoom-in">
                 <p class="underline">Avisos</p>
                 <ul>
-                    <li>Privacidad</li>
-                    <li>Terminos</li>
+                    <li title="Privacidad">Privacidad</li>
+                    <li title="Terminos">Terminos</li>
                 </ul>
             </div>
-            <div class="col-2">
-                <p class="underline center-block">Servicios</p>
-                <ul class="center-block text-center">
-                    <li>Preguntas Frecuentes</li>
-                    <li>Logo@gmail.com</li>
+            <div class="footer-content"  data-aos="zoom-in">
+                <p class="underline">Servicios</p>
+                <ul>
+                    <li title="Preguntas">Preguntas Frecuentes</li>
+                    <li title="Email">Logo@gmail.com</li>
                 </ul>
             </div>
-            <div class="col-3 row centerMargin">
-                <p class="underline">Redes</p>
+            <div class="centerMargin">
+                <div class="footer-Icons">
+                    <a title="Youtube"><span class="icon icon-youtube"></span></a>
+                    <a title="Twitter"><span class="icon icon-twitter"></span></a>
+                    <a title="Instagram"><span class="icon icon-instagram"></span></a>
+                    <a title="Facebook"><span class="icon icon-facebook2"></span></a>
+                </div>
             </div>
+
         </div>
     </footer>
 </body>
