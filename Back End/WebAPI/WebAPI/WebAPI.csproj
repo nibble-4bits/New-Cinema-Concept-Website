@@ -133,6 +133,7 @@
     <Content Include="Views\admin\leftBarAdmin.html" />
     <Content Include="Views\user\leftBarUser.html" />
     <Content Include="Views\user\pedidos.html" />
+    <Content Include="Views\user\configuracion.html" />
     <Content Include="Views\user\ticket.html" />
     <Content Include="Views\user\userIndex.html" />
     <Content Include="Web.config" />

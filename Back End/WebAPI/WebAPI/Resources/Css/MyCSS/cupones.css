@@ -16,9 +16,10 @@ span.justify-content-center{
     text-align: justify;
     padding: 10px;
 }
-.flex-item-cupones{
+.flex-item-cupones {
+    width: 100%;
+    align-content: space-between;
     display: flex;
-    align-items: start;
     padding: 10px 10px 10px 10px;
 }
 .btn-cupon{
