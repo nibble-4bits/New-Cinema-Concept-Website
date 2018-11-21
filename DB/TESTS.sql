@@ -10,6 +10,13 @@ GO
 EXEC dbo.sp_CreateTicket 2, 'Insecto en las palomitas', 'Calidad', 'Me aparecieron unas cucarachas en mis palomitas con extra mantequilla'
 GO
 
+-- Cupones
+INSERT INTO Cupon(Codigo, Descripcion)
+			VALUES('ABCDEF', '$40 de descuento en dulcería'),
+				  ('CU7ONZ', '$50 de descuento en todo el cine'),
+				  ('Q83M2D', '20% de descuento en dulcería')
+GO
+
 -- Productos
 INSERT INTO Producto(Nombre, PrecioUnitario)
 			VALUES('Palomitas chicas', 37.99),
