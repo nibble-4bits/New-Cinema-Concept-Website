@@ -28,3 +28,11 @@ AS
 		[Password] = ISNULL(@Password, [Password])
 	WHERE Id = @Id
 GO
+
+CREATE PROCEDURE dbo.sp_CambiarTipo
+@IdUsuario INT, @Tipo INT
+AS
+	UPDATE Usuario
+	SET Tipo = @Tipo
+	WHERE Id = @IdUsuario
+GO
