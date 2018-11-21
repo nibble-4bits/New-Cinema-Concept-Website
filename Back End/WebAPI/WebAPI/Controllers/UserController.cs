@@ -86,5 +86,34 @@ namespace WebAPI.Controllers
                 conn.Close();
             }
         }
+
+        // PUT: api/User
+        [HttpPut]
+        [Route("api/User/upgrade")]
+        public IHttpActionResult AscenderTipo([FromBody]Usuario usuario)
+        {
+            IDatabaseConnection conn = new SqlServerConnection();
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            try
+            {
+                conn.Open();
+
+                parameters.Add(new SqlParameter("@IdUsuario", usuario.Id));
+                parameters.Add(new SqlParameter("@Tipo", usuario.Tipo));
+
+                conn.ExecuteNonQuerySP(new StoredProcedure("dbo.sp_CambiarTipoUsuario", parameters));
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
