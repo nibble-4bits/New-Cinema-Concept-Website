@@ -29,3 +29,12 @@
 .icon-comedy:before {
     content: '\e800';
 }
+.icon-diamond:before {
+    content: '\e801';
+}
+.icon-observableEye:before {
+    content: '\e802';
+}
+.icon-cineries:before {
+    content: '\e803';
+}

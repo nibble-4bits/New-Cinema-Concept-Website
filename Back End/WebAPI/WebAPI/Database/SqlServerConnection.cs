@@ -63,9 +63,12 @@ namespace WebAPI.Database
                     CommandTimeout = 120
                 };
 
-                if (procedure.Parameters != null || procedure.Parameters.Any())
+                if (procedure.Parameters != null)
                 {
-                    command.Parameters.AddRange(procedure.Parameters.ToArray());
+                    if (procedure.Parameters.Any())
+                    {
+                        command.Parameters.AddRange(procedure.Parameters.ToArray());
+                    }
                 }
 
                 SqlDataAdapter adapterDataTable = new SqlDataAdapter(command);
@@ -89,9 +92,12 @@ namespace WebAPI.Database
                     CommandTimeout = 120
                 };
 
-                if (procedure.Parameters != null || procedure.Parameters.Any())
+                if (procedure.Parameters != null)
                 {
-                    command.Parameters.AddRange(procedure.Parameters.ToArray());
+                    if (procedure.Parameters.Any())
+                    {
+                        command.Parameters.AddRange(procedure.Parameters.ToArray());
+                    }
                 }
 
                 return command.ExecuteNonQuery();

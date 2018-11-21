@@ -2,13 +2,13 @@ var container;
 var modal1;
 var modal2;
 
-
 $(document).ready(function () {
     container = $("#wrapper");
     modal1 = $("#id01");
     modal2 = $("#id02");
-   // $('.aniview').AniView();
+    /*Configuracion*/
 });
+
 $(document).mouseup(function(e) 
 {
 
@@ -45,4 +45,16 @@ RemoveModal1 = function () {
 };
 RemoveModal2 = function () {
     modal2.removeClass("modalblock");
+};
+
+AparecerMisDatos = function () {
+    $("#MisDatos").toggleClass("down");
+};
+SubirRango = function () {
+    $("#MiRango").toggleClass("down");
+};
+
+/*Configuration*/
+Pelicula = function (idPelicula) {
+    parent.location = '#!pelicula';
 };

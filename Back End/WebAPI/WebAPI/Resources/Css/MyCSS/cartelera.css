@@ -9,6 +9,16 @@
     background-color: #7f7f9659;
     border-radius: 10px;
 }
+@media only screen and (max-width: 425px) and (min-width: 0px) {
+    .child {
+        flex: unset !important;
+        margin: 5%;
+        height: 250px;
+        background-color: #7f7f9659;
+        border-radius: 10px;
+    }
+}
+
 .flex-container {
     display: -webkit-flex;
     display: flex;
