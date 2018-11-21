@@ -32,9 +32,10 @@ namespace WebAPI.Controllers
 
                 while (reader.Read())
                 {
-                    if (usuario.Username.Equals(reader["Username"].ToString()))
+                    if (usuario.Password.Equals(reader["Password"].ToString()))
                     {
-                        string token = TokenGenerator.GenerateTokenJwt(usuario.Username);
+                        usuario.Id = int.Parse(reader["Id"].ToString());
+                        string token = TokenGenerator.GenerateTokenJwt(usuario);
                         return Ok(token); // http status 200
                     }
                 }
