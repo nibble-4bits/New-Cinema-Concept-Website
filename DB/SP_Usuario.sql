@@ -29,7 +29,7 @@ AS
 	WHERE Id = @Id
 GO
 
-CREATE PROCEDURE dbo.sp_CambiarTipo
+CREATE PROCEDURE dbo.sp_CambiarTipoUsuario
 @IdUsuario INT, @Tipo INT
 AS
 	UPDATE Usuario
