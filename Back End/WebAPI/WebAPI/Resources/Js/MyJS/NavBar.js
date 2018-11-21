@@ -7,6 +7,7 @@ $(document).ready(function () {
     container = $("#wrapper");
     modal1 = $("#id01");
     modal2 = $("#id02");
+   // $('.aniview').AniView();
 });
 $(document).mouseup(function(e) 
 {

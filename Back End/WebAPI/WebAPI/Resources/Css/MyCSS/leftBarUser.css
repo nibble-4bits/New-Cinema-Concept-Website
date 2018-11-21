@@ -106,3 +106,13 @@ a.final-bottom {
     margin-top: 50%;
     margin-bottom: 0px
 }
+
+
+.a-Rotation {
+    transition: 2s ease all;
+}
+
+.a-Rotation:hover{
+    transform: rotateY(360deg);
+    
+}

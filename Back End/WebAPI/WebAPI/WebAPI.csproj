@@ -107,7 +107,12 @@
     <Content Include="Resources\Css\MyCSS\modalSession.css" />
     <Content Include="Resources\Css\MyCSS\ticket.css" />
     <Content Include="Global.asax" />
+    <Content Include="Resources\Icons\IcoMoon\demo.css" />
+    <Content Include="Resources\Icons\IcoMoon\liga.js" />
+    <Content Include="Resources\Icons\MyIcons\MyIcons.css" />
+    <Content Include="Resources\Img\Jpg\Index\Cartelera\alteredcarbon.jpg" />
     <Content Include="Resources\Img\Png\User\user.png" />
+    <Content Include="Resources\Img\Svg\Cineries-Logo.svg" />
     <Content Include="Resources\Js\Angular\angular-idle.js" />
     <Content Include="Resources\Js\Angular\angular-route.js" />
     <Content Include="Resources\Js\Angular\angular.js" />
@@ -168,7 +173,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Resources\Img\Jpg\Admin\" />
-    <Folder Include="Resources\Img\Jpg\Index\" />
     <Folder Include="Resources\Img\Jpg\User\" />
     <Folder Include="Resources\Img\Png\Admin\" />
     <Folder Include="Resources\Img\Png\Index\" />
