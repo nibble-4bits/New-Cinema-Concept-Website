@@ -91,6 +91,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Css\AdminIndex.css" />
     <Content Include="Resources\Css\Animate\animate.css" />
     <Content Include="Resources\Css\BootStrap\bootstrap-grid.css" />
     <Content Include="Resources\Css\BootStrap\bootstrap-grid.min.css" />
@@ -98,10 +99,13 @@
     <Content Include="Resources\Css\BootStrap\bootstrap-reboot.min.css" />
     <Content Include="Resources\Css\BootStrap\bootstrap.css" />
     <Content Include="Resources\Css\BootStrap\bootstrap.min.css" />
+    <Content Include="Resources\Css\MyCSS\AdminIndex.css" />
     <Content Include="Resources\Css\MyCSS\cartelera.css" />
+    <Content Include="Resources\Css\MyCSS\configuracion.css" />
     <Content Include="Resources\Css\MyCSS\cupones.css" />
     <Content Include="Resources\Css\MyCSS\historial.css" />
     <Content Include="Resources\Css\MyCSS\Index.css" />
+    <Content Include="Resources\Css\MyCSS\IndexMain.css" />
     <Content Include="Resources\Css\MyCSS\leftBarAdmin.css" />
     <Content Include="Resources\Css\MyCSS\leftBarUser.css" />
     <Content Include="Resources\Css\MyCSS\modalSession.css" />
@@ -110,11 +114,14 @@
     <Content Include="Resources\Icons\IcoMoon\demo.css" />
     <Content Include="Resources\Icons\IcoMoon\liga.js" />
     <Content Include="Resources\Icons\MyIcons\MyIcons.css" />
+    <Content Include="Resources\Img\Ico\Cineries-Logo.ico" />
     <Content Include="Resources\Img\Png\User\user.png" />
+    <Content Include="Resources\Img\Svg\Cineries-Logo.svg" />
     <Content Include="Resources\Js\Angular\angular-idle.js" />
     <Content Include="Resources\Js\Angular\angular-route.js" />
     <Content Include="Resources\Js\Angular\angular.js" />
     <Content Include="Resources\Js\Aniview\jquery-aniview-master\dist\jquery.aniview.js" />
+    <Content Include="Resources\Js\Index.js" />
     <Content Include="Resources\Js\JQuery\jquery-3.3.1.min.js" />
     <Content Include="Resources\Js\MyJS\AdminApp\Controller\AdminController.js" />
     <Content Include="Resources\Js\MyJS\IndexApp\Controller\IndexController.js" />
@@ -131,10 +138,9 @@
     <Content Include="Views\user\cartelera.html" />
     <Content Include="Views\user\cupones.html" />
     <Content Include="Views\user\historial.html" />
-    <Content Include="Views\admin\leftBarAdmin.html" />
-    <Content Include="Views\user\leftBarUser.html" />
     <Content Include="Views\user\pedidos.html" />
     <Content Include="Views\user\configuracion.html" />
+    <Content Include="Views\user\pelicula.html" />
     <Content Include="Views\user\ticket.html" />
     <Content Include="Views\user\userIndex.html" />
     <Content Include="Web.config" />

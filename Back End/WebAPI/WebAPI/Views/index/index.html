@@ -1,7 +1,9 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="icon" href="../../Resources/Img/Ico/Cineries-Logo.ico">
     <title>Cineries</title>
+    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--BootStrap CSS-->
@@ -16,6 +18,7 @@
     <!--CSS Personal-->
     <link rel="stylesheet" href="../../Resources/Css/MyCSS/Index.css">
     <link rel="stylesheet" href="../../Resources/Css/MyCSS/modalSession.css">
+    <link rel="stylesheet" href="../../Resources/Css/MyCSS/IndexMain.css">
     <!--BootStrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -29,9 +32,17 @@
     <script src="../../Resources/Js/Angular/angular.js"></script>
     <script src="../../Resources/Js/Angular/angular-route.js"></script>
     <!--JS Personal-->
+    <script src="../../Resources/Js/Index.js"></script>
     <script src="../../Resources/Js/MyJS/NavBar.js"></script>
     <script src="../../Resources/Js/MyJS/IndexApp/MyAppIndex.js"></script>
     <script src="../../Resources/Js/MyJS/IndexApp/Controller/IndexController.js"></script>
+    <!--Personal Icons-->
+    <link rel="stylesheet" href="../../Resources/Icons/MyIcons/MyIcons.css">
+    <!--IcoMoon-->
+    <link rel="stylesheet" href="../../Resources/Icons/IcoMoon/demo.css">
+    <script src="../../Resources/Icons/IcoMoon/liga.js"></script>
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="background">
     <section id="LoginModals">
@@ -77,7 +88,7 @@
                     <input type="password" placeholder="Ingresar Contraseña" name="pswrd" id="txtPass" required>
                     <label for="uDob"><b>Fecha de Nacimiento</b></label>
                     <input type="text" placeholder="Ingrese fecha de nacimiento" name="uDob" id="txtDOB" required>
-                    <button id="btnLogin">Registrarse</button>
+                    <button id="btnRegistro">Registrarse</button>
                 </div>
                 <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="RemoveModal2()" class="btn btn-outline-danger btn-lg">Cancel</button>
@@ -86,14 +97,15 @@
         </div>
     </section>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-expand-xl bg-PurpleNav navbar-fixed-top">
-            <div class="navbar-brand">
-                <a>LOGO</a>
+        <nav class="navbar bg-PurpleNav navbar-fixed-top">
+            <div class="navbar-brand flex-container">
+                <a class="demo-icon icon-cineries logo textRainbow"></a>
             </div>
-            <div class="collapse navbar-collapse">
+            <div style="flex:1;"></div>
+            <div class="">
                 <div class="navbar-nav ml-auto">
-                    <a title="Iniciar Sesion"class="nav-item nav-link active" onclick="FirstModal()">Iniciar Sesion</a>
-                    <a title="Registrarme" class="nav-item nav-link active" onclick="SecondModal()">Registrarme</a>
+                    <a title="Iniciar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="FirstModal()"><span class="icon icon-user"></span><p class="textHeaderHide">Iniciar Sesión</p></a>
+                    <a title="Registrarme" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="SecondModal()"><span class="icon icon-user-plus"></span><p class="textHeaderHide">Registrarme</p></a>
                 </div>
             </div>
         </nav>
@@ -102,40 +114,40 @@
     <main>
         <br />
         <div ng-app="myApp" style="background-color:white">
-            <div ng-view  ng-controller="LoginController">
+            <div ng-view ng-controller="IndexController">
             </div>
         </div>
         <br />
     </main>
     <footer>
         <div class="footer">
-            <div class="centerMargin">
-                <h1>Logo</h1>
+            <div class="centerMargin" data-aos="flip-down">
+                <a class="demo-icon icon-cineries logo textRainbow"></a>
             </div>
             <div class="verticalLine">
             </div>
-            <div class="footer-content">
+            <div class="footer-content" data-aos="zoom-in">
                 <p class="underline">Soporte</p>
                 <ul>
                     <li title="Dirección">Dirección: Salle Bajio</li>
                     <li title="Teléfono">Teléfono: 477-290-5369</li>
                 </ul>
             </div>
-            <div class="footer-content">
+            <div class="footer-content" data-aos="zoom-in">
                 <p class="underline">Avisos</p>
                 <ul>
                     <li title="Privacidad">Privacidad</li>
                     <li title="Terminos">Terminos</li>
                 </ul>
             </div>
-            <div class="footer-content">
+            <div class="footer-content" data-aos="zoom-in">
                 <p class="underline">Servicios</p>
                 <ul>
                     <li title="Preguntas">Preguntas Frecuentes</li>
-                    <li title="Email">Logo@gmail.com</li>
+                    <li title="Email">Cineries@gmail.com</li>
                 </ul>
             </div>
-            <div class="centerMargin">
+            <div class="centerMargin underline-icons ">
                 <div class="footer-Icons">
                     <a title="Youtube"><span class="icon icon-youtube"></span></a>
                     <a title="Twitter"><span class="icon icon-twitter"></span></a>
@@ -143,6 +155,7 @@
                     <a title="Facebook"><span class="icon icon-facebook2"></span></a>
                 </div>
             </div>
+
         </div>
     </footer>
 </body>

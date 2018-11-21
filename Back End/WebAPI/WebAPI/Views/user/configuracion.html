@@ -1,19 +1,111 @@
 <div class="container cbs">
     <div class="row justify-content-center"> 
-        <h1>Configuración</h1>
+        <h1>Configuraci&oacute;n</h1>
     </div>
     <div class="container ticket-body">
-        <div class="row">
-            <input type="text" class="form-control rounded">
-        </div>
-        <div class="row">
-            <textarea class="form-control"></textarea>
-        </div>
-        <div class="row">
-            <select class="form-control"></select>
+        <div class="row justify-content-center">
+            <a title="Mis Datos" class="flex-container hoverWhiteNavBar rotate" onclick="AparecerMisDatos()">
+                <span class="icon icon-file-text2"></span>
+                <p class="underline justify-content-center">Mis datos</p>
+                <span id="MisDatos" class="icon icon-play3 rotate"></span>
+            </a>
         </div>
         <div class="row justify-content-center">
-            <a class="btn-danger">Enviar</a>
+            <div class="flex-container flex-column">
+                <div class="flex-itemConfiguracion">
+                    <label class="spanConfiguracion">Nombre </label>
+                    <input type="text" class="rounded">
+                </div>
+                <div class="flex-itemConfiguracion">
+                    <label class="spanConfiguracion">Nombre </label>
+                    <input type="text" class="rounded">
+                </div>
+                <div class="flex-itemConfiguracion">
+                    <label class="spanConfiguracion">Nombre </label>
+                    <input type="text" class="rounded">
+                </div>
+                <div class="flex-itemConfiguracion">
+                    <label class="spanConfiguracion">Nombre </label>
+                    <input type="text" class="rounded">
+                </div>
+                <div class="flex-itemConfiguracion">
+                    <label class="spanConfiguracion">Nombre </label>
+                    <input type="text" class="rounded">
+                </div>
+                <div class="flex-itemConfiguracion">
+                    <label class="spanConfiguracion">Nombre </label>
+                    <input type="text" class="rounded">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <a class="btn btn-outline-success btn-lg">Actualizar</a>
+        </div>
+        <div class="row justify-content-center">
+            <a title="Subir Rango" class="flex-container hoverWhiteNavBar" onclick="SubirRango()">
+                <span class="demo-icon icon-diamond"></span>
+                <p class="underline justify-content-center">Subir Rango</p>
+                <span id="MiRango" class="icon icon-play3 rotate"></span>
+            </a>
+        </div>
+        <div class="row justify-content-center">
+            <table class="row justify-content-center table table-responsive table-responsivelarge">
+                <tr>
+                    <th>Acciones</th>
+                    <th>Com&uacute;n</th>
+                    <th>Oro</th>
+                    <th>Platino</th>
+                </tr>
+                <tr>
+                    <td>Compra de boletos</td>
+                    <td><span class="icon icon-checkmark"></span></td>
+                    <td><span class="icon icon-checkmark"></span></td>
+                    <td><span class="icon icon-checkmark"></span></td>
+                </tr>
+                <tr>
+                    <td>Uso de cupones</td>
+                    <td><span class="icon icon-cross"></span></td>
+                    <td><span class="icon icon-checkmark"></span></td>
+                    <td><span class="icon icon-checkmark"></span></td>
+                </tr>
+                <tr>
+                    <td>Hacer pedidos</td>
+                    <td><span class="icon icon-cross"></span></td>
+                    <td><span class="icon icon-cross"></span></td>
+                    <td><span class="icon icon-checkmark"></span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row justify-content-center">
+            <table id="tblTypeUser" class="justify-content-center table-responsive">
+                <tr>
+                    <td>
+                        <label for="Común">Com&uacute;n</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="rdComun" value="Común">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Oro">Oro</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="rdOro" value="Oro">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Platino">Platino</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="rdPlatino" value="Paltino">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row justify-content-center">
+            <a class="btn btn-outline-warning btn-lg">Mejorar</a>
         </div>
     </div>
 </div>

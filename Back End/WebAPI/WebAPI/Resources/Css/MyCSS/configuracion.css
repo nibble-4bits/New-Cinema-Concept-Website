@@ -1,0 +1,18 @@
+﻿.spanConfiguracion {
+    padding-right: 10px;
+}
+.flex-itemConfiguracion {
+    width: 100%;
+    margin: 3px;
+    padding: 10px 0 0 10px;
+}
+.icon-checkmark {
+    color:green;
+}
+.icon-cross {
+    color:red;
+}
+input[type="radio"] {
+    display: inline;
+    float: none;
+}
