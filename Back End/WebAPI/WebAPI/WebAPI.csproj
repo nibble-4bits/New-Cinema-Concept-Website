@@ -147,12 +147,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FuncionController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
+    <Compile Include="Controllers\ProyectableController.cs" />
     <Compile Include="Controllers\TokenGenerator.cs" />
     <Compile Include="Controllers\TokenValidationHandler.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Database\IDatabaseConnection.cs" />
+    <Compile Include="Database\SqlServerConnection.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Episodio.cs" />
+    <Compile Include="Models\Funcion.cs" />
+    <Compile Include="Models\Pedido.cs" />
+    <Compile Include="Models\Pelicula.cs" />
+    <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\Producto_Pedido.cs" />
+    <Compile Include="Models\Proyectable.cs" />
+    <Compile Include="Models\Sala.cs" />
+    <Compile Include="Models\Serie.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Usuario_Funcion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\StoredProcedure.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Js\Aniview\jquery-aniview-master\LICENSE" />
