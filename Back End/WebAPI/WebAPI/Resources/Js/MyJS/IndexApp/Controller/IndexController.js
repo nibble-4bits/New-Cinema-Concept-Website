@@ -1,4 +1,4 @@
-﻿app.controller("LoginController", ['$scope', '$http', '$location', function ($scope, $http, $location) {
+﻿app.controller("IndexController", ['$scope', '$http', '$location', function ($scope, $http, $location) {
     $scope.Login = function () {
         var UserData = {
             Nick: $scope.Nick,
