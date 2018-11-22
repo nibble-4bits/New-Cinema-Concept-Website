@@ -2,15 +2,15 @@
     flex: 1 0 23%;
     margin: 1%;
     height: 250px;
-    background-color: #7f7f96;
+    background-color: #7f7f9659;
     border-radius: 10px;
 }
 @media only screen and (max-width: 425px) and (min-width: 0px) {
     .child-cupones {
-        flex: unset !important; 
+        flex: unset !important;
         margin: 1%;
         height: 250px;
-        background-color: #7f7f96;
+        background-color: #7f7f9659;
         border-radius: 10px;
     }
     .special-movil {
