@@ -5,6 +5,8 @@
     width: 100%;
     margin: 3px;
     padding: 10px 0 0 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 .icon-checkmark {
     color:green;
@@ -98,6 +100,20 @@ input[type="radio"] {
     padding: 15px;
 }
 
-.icon-play3 {
-
+@media only screen and (max-width: 1023px) and (min-width: 0px) {
+    .flex-itemConfiguracion {
+        width: 100%;
+        margin: 3px;
+        padding: 10px 0 0 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .inputContent {
+        width: 100%;
+    }
+}
+@media only screen and (min-width:1024px) {
+    .inputContent {
+        width: 45%;
+    }
 }
