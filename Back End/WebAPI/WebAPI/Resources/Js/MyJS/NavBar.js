@@ -66,5 +66,9 @@ SubirRango = function () {
 
 /*Configuration*/
 Pelicula = function (idPelicula) {
+    $("#idPelicula").val(idPelicula);
+
+
+    /*HTTP REQUEST */
     parent.location = '#!pelicula';
 };
