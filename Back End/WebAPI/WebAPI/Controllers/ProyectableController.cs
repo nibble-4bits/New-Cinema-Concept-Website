@@ -11,6 +11,7 @@ using WebAPI.Util;
 
 namespace WebAPI.Controllers
 {
+    [Authorize]
     public class ProyectableController : ApiController
     {
         // GET: api/peliculas

@@ -37,6 +37,7 @@
     <script src="../../Resources/Js/MyJS/NavBar.js"></script>
     <script src="../../Resources/Js/MyJS/UserApp/MyAppUserIndex.js"></script>
     <script src="../../Resources/Js/MyJS/UserApp/Controller/UserController.js"></script>
+    <script src="../../Resources/Js/Util/UtilFunctions.js"></script>
     <!--Personal Icons-->
     <link rel="stylesheet" href="../../Resources/Icons/MyIcons/MyIcons.css">
     <!--IcoMoon-->
@@ -45,7 +46,7 @@
     <!--Google Icons-->
     <link href="../../Resources/Css/Google/GoogleFontIcon.css" rel="stylesheet">
 </head>
-    <body class="background">
+    <body class="background" ng-app="myApp" ng-controller="UserController">
         <p hidden id="idPelicula"></p>
         <div id="actions">
             <div id="wrapper">
@@ -53,7 +54,7 @@
                     <ul class="sidebar-nav">
                         <li class="sidebar-brand sidebar-Title">
                             <a href="#" class="TitleLeftBar">
-                                Nick
+                            {{nickname}}
                             </a>
                         </li>
                         <li class="sidebar-content">
@@ -75,7 +76,7 @@
                             <a title="Configuración" href="#!configuration" class="IconLeftBar"><span class="icon icon-cog"></span> Configuración</a>
                         </li>
                         <li class="siderbar-Leave">
-                            <a title="Cerrar Sesión" href="#" class="IconLeftBar final-bottom"><span class="icon icon-switch"></span> Desconectarme</a>
+                            <a ng-click="Logout()"  title="Cerrar Sesión" href="#" class="IconLeftBar final-bottom"><span class="icon icon-switch"></span> Desconectarme</a>
                         </li>
                     </ul>
                 </div>
@@ -89,8 +90,8 @@
                 </div>
                 <div>
                     <div class="navbar-nav ml-auto">
-                        <a title="Cartelera" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="demo-icon icon-comedy"></span><p class="textHeaderHide">Cartelera</p></a>
-                        <a title="Cerrar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-exit"></span><p class="textHeaderHide">Cerrar Sesion</p></a>
+                        <a  href="#!"  title="Cartelera" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="demo-icon icon-comedy"></span><p class="textHeaderHide">Cartelera</p></a>
+                        <a ng-click="Logout()" title="Cerrar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-exit"></span><p class="textHeaderHide">Cerrar Sesion</p></a>
                     </div>
                 </div>
             </nav>

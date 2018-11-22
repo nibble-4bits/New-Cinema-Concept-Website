@@ -15,16 +15,58 @@ namespace WebAPI.Controllers
     [Authorize]
     public class PedidoController : ApiController
     {
-        // GET: api/Pedido
-        public IEnumerable<string> Get()
+        // GET: api/Pedido/1
+        [HttpGet]
+        public IHttpActionResult ObtenerPedidosPorUsuario(int idUsuario)
         {
-            return new string[] { "value1", "value2" };
-        }
+            IDatabaseConnection conn = new SqlServerConnection();
+            List<Pedido> pedidos = new List<Pedido>();
+            List<SqlParameter> parameters = new List<SqlParameter>();
 
-        // GET: api/Pedido/5
-        public string Get(int id)
-        {
-            return "value";
+            try
+            {
+                conn.Open();
+
+                parameters.Add(new SqlParameter("@IdUsuario", idUsuario));
+
+                DataTableReader reader = conn.ExecuteQuerySP(new StoredProcedure("dbo.sp_ObtenerPedidosIdUsuario", parameters));
+
+                List<Producto_Pedido> producto_pedidos = new List<Producto_Pedido>();
+                while (reader.Read())
+                {
+                    producto_pedidos.Add(new Producto_Pedido
+                    {
+                        Id = int.Parse(reader["IdProducto_Pedido"].ToString()),
+                        Cantidad = int.Parse(reader["Cantidad"].ToString()),
+                        Producto = new Producto
+                        {
+                            Id = int.Parse(reader["IdProducto"].ToString()),
+                            Nombre = reader["Nombre"].ToString(),
+                            PrecioUnitario = decimal.Parse(reader["PrecioUnitario"].ToString())
+                        }
+                    });
+
+                    Pedido pedidoInsertado = new Pedido
+                    {
+                        Id = int.Parse(reader["IdPedido"].ToString()),
+                        FechaCompra = DateTime.Parse(reader["FechaCompra"].ToString()),
+                        PrecioTotal = decimal.Parse(reader["PrecioTotal"].ToString()),
+                        Producto_Pedido = producto_pedidos
+                    };
+
+                    pedidos.Add(pedidoInsertado);
+                }
+
+                return Ok(pedidos);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         // POST: api/Pedido
@@ -71,7 +113,7 @@ namespace WebAPI.Controllers
 
                 Pedido pedidoInsertado = new Pedido
                 {
-                    Id = int.Parse(dtr["SaleId"].ToString()),
+                    Id = int.Parse(dtr["IdPedido"].ToString()),
                     FechaCompra = DateTime.Parse(dtr["FechaCompra"].ToString()),
                     PrecioTotal = decimal.Parse(dtr["PrecioTotal"].ToString()),
                     Producto_Pedido = producto_pedidos,

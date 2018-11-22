@@ -3,22 +3,10 @@
             <h1>Cupones</h1>
     </div>
     <div class="row parent justify-content-center">
-        <div class="child-cupones flex-container d-flex flex-column">
-            <h4 class="justify-content-center-cupones centerMargin">Prueba</h4>
+        <div class="child-cupones flex-container d-flex flex-column" ng-repeat="cupon in cupones">
+            <h4 class="justify-content-center-cupones centerMargin">{{ cupon.Codigo }}</h4>
             <span class="justify-content-center-cupones flex-item-cupones">
-                Este cupon te permite comprar cosas
-            </span>
-        </div>
-        <div class="child-cupones flex-container d-flex flex-column">
-            <h4 class="justify-content-center-cupones centerMargin">Prueba</h4>
-            <span class="justify-content-center-cupones flex-item-cupones">
-                Este cupon te permite comprar cosas
-            </span>
-        </div>
-        <div class="child-cupones flex-container d-flex flex-column">
-            <h4 class="justify-content-center-cupones centerMargin">Prueba</h4>
-            <span class="justify-content-center-cupones flex-item-cupones">
-                Este cupon te permite comprar cosas
+                 {{ cupon.Descripcion }}
             </span>
         </div>
     </div>

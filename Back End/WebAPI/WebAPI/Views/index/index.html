@@ -43,19 +43,39 @@
     <link href="../../Resources/Css/Google/GoogleFontIcon.css" rel="stylesheet">
 </head>
     <body class="background">
-        <section id="LoginModals">
-            <h3></h3>
+<body class="background">
+    <header>
+        <nav class="navbar bg-PurpleNav navbar-fixed-top">
+            <div class="navbar-brand flex-container">
+                <a class="demo-icon icon-cineries logo textRainbow"></a>
+            </div>
+            <div style="flex:1;"></div>
+            <div class="">
+                <div class="navbar-nav ml-auto">
+                    <a title="Iniciar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="FirstModal()"><span class="icon icon-user"></span><p class="textHeaderHide">Iniciar Sesión</p></a>
+                    <a title="Registrarme" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="SecondModal()"><span class="icon icon-user-plus"></span><p class="textHeaderHide">Registrarme</p></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <br />
+        <div ng-app="myApp" ng-controller="IndexController" style="background-color:white">
+            <div ng-view>
+            </div>
+            <section id="LoginModals">
             <div id="id01" class="modal">
-                <form class="modal-content animate">
+                <form class="modal-content animate" ng-submit="Login()">
                     <div class="modal-body">
                         <div class="d-flex flex-column">
                             <label><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" id="txtUserName" required>
+                            <input ng-model="user.Username" type="text" placeholder="Enter Username" name="uname" id="txtUserName" required>
 
                             <label><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" id="txtPassword" required>
+                            <input ng-model="user.Password" type="password" placeholder="Enter Password" name="psw" id="txtPassword" required>
 
-                            <button id="btnLogin" class="btn btn-outline-success btn-lg modalButtons">Login</button>
+							<input id="btnLogin" class="btn btn-outline-success btn-lg modalButtons" type="submit" value="Login"/>
                         </div>
                     </div>
                     <div class="modal-footer" style="background-color:#f1f1f1">
@@ -65,57 +85,34 @@
                 </form>
             </div>
             <div id="id02" class="modal">
-                <form class="modal-content animate">
+                <form class="modal-content animate" ng-submit="SignUp()>
                     <div class="modal-body d-flex flex-columnMobile flex-space">
                         <div class="d-flex flex-column">
                             <label><b>Nombre</b></label>
-                            <input type="text" placeholder="Ingrese Nombre" name="uname" id="txtName" required>
+                            <input ng-model="userR.Nombre" type="text" placeholder="Ingrese Nombre" name="uname" id="txtName" required>
                             <label><b>Apellido Paterno</b></label>
-                            <input type="text" placeholder="Ingrese Apellido Paterno" name="ApellPat" id="txtPaterno" required>
+                            <input ng-model="userR.ApellidoP" type="text" placeholder="Ingrese Apellido Paterno" name="ApellPat" id="txtPaterno" required>
                             <label><b>Apellido Materno</b></label>
-                            <input type="text" placeholder="Ingrese Apellido Materno" name="ApellMat" id="txtMaterno" required>
+                            <input  ng-model="userR.ApellidoM" type="text" placeholder="Ingrese Apellido Materno" name="ApellMat" id="txtMaterno" required>
                             <label><b>Email</b></label>
-                            <input type="email" placeholder="Ingrese Email" name="uEmail" id="txtEmail" required>
+                            <input ng-model="userR.Email" type="email" placeholder="Ingrese Email" name="uEmail" id="txtEmail" required>
                         </div>
                         <div class="d-flex flex-column">
                             <label><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uName" id="txtUser" required>
+                            <input ng-model="userR.Username" type="text" placeholder="Enter Username" name="uName" id="txtUser" required>
                             <label><b>Contraseña</b></label>
-                            <input type="password" placeholder="Ingresar Contraseña" name="pswrd" id="txtPass" required>
+                            <input ng-model="userR.Password" type="password" placeholder="Ingresar Contraseña" name="pswrd" id="txtPass" required>
                             <label><b>Fecha de Nacimiento</b></label>
-                            <input type="date" placeholder="Ingrese fecha de nacimiento" name="uDob" id="txtDOB" required>
+                            <input ng-model="userR.FechaNacimiento" type="date" placeholder="Ingrese fecha de nacimiento" name="uDob" id="txtDOB" required>
                         </div>
                     </div>
                     <div class="modal-footer" style="background-color:#f1f1f1">
-                        <button type="button" onclick="RemoveModal2()" class="btn btn-outline-danger btn-lg modalButtons">Cancel</button>
-                        <button id="btnRegistro" class="btn btn-outline-success btn-lg modalButtons">Registrarse</button>
+                        <button type="button"  class="btn btn-outline-danger btn-lg modalButtons">Cancel</button>
+                        <input id="btnRegistro" type="submit" value="Registrarse" class="btn btn-outline-success btn-lg modalButtons"/>
                     </div>
                 </form>
             </div>
         </section>
-        <header>
-            <nav class="navbar bg-PurpleNav navbar-fixed-top">
-                <div class="navbar-brand flex-container">
-                    <a class="demo-icon icon-cineries logo textRainbow"></a>
-                </div>
-                <div style="flex:1;"></div>
-                <div class="">
-                    <div class="navbar-nav ml-auto">
-                        <a title="Iniciar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="FirstModal()"><span class="icon icon-user"></span><p class="textHeaderHide">Iniciar Sesión</p></a>
-                        <a title="Registrarme" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="SecondModal()"><span class="icon icon-user-plus"></span><p class="textHeaderHide">Registrarme</p></a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <br />
-            <div ng-app="myApp" style="background-color:white">
-                <div ng-view ng-controller="IndexController">
-                </div>
-            </div>
-            <br />
-        </main>
         <footer>
             <div class="footer">
                 <div class="centerMargin" data-aos="flip-down">

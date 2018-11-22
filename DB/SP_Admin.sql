@@ -130,3 +130,5 @@ AS
 	FROM Usuario 
 	GROUP BY Tipo
 GO
+
+SELECT * FROM Usuario

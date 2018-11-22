@@ -4,6 +4,8 @@ GO
 -- Usuarios
 EXEC dbo.sp_RegistrarUsuario 'Luis Andrés', 'De Anda', 'Cuéllar', 'ldeanda@gmail.com', 'nullptr', 'mipass', '1998-04-03'
 EXEC dbo.sp_RegistrarUsuario 'Jorge Arturo', 'Rangel', 'Luna', 'jarangel@gmail.com', 'elYorch', 'supass', '1999-03-11'
+EXEC dbo.sp_RegistrarUsuario 'Miguel', 'Perez', 'Hernandez', 'miguelo@gmail.com', 'elmike', 'asdfg', '1983-07-28'
+EXEC dbo.sp_RegistrarUsuario 'Admin', 'Admin', 'Admin', 'admin@gmail.com', 'admin', 'admin', '1980-03-11'
 GO
 
 -- Tickets
@@ -21,8 +23,12 @@ GO
 INSERT INTO Producto(Nombre, PrecioUnitario)
 			VALUES('Palomitas chicas', 37.99),
 				  ('Palomitas medianas', 47.99),
+				  ('Palomitas grandes', 57.99),
+				  ('Palomitas jumbo', 67.99),
 				  ('Refresco de 355ml', 25.99),
-				  ('Hot-Dog', 29.99)
+				  ('Hot-Dog', 29.99),
+				  ('KitKat', 29.99),
+				  ('ICEE', 39.99)
 GO
 
 -- Sala (14 salas)
