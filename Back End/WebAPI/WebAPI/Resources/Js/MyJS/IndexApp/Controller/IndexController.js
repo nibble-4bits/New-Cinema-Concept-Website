@@ -11,11 +11,18 @@
         }).then(function (response) {
             if ($.trim(response.data)) {
                 sessionStorage.setItem('token', response.data);
-                $window.location.href = '/Views/user/userIndex.html';
+                
+                if (getUsername($window.sessionStorage.getItem('token')) == 'admin') {
+                    $window.location.href = '/Views/admin/adminIndex.html';
+                }
+                else {
+                    $window.location.href = '/Views/user/userIndex.html';
+                }
             }
 
         }, function (error) {
             if (error.status == 404) {
+                alert('Su usuario o contraseña no coinciden. Por favor intentelo de nuevo');
                 // No se encontró el usuario, notificarlo
             }
             else {

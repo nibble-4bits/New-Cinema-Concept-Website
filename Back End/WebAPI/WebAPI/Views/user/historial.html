@@ -1,26 +1,21 @@
-
 <div class="container cbs">
     <div class="row justify-content-center"> 
         <h1>Historial</h1>
     </div>
     <table class="row justify-content-center table table-responsive table-responsivelarge">
         <tr>
-            <th>Compra</th>
+            <th>Producto</th>
             <th>Cantidad</th>
+            <th>Precio unitario</th>
             <th>Fecha</th>
             <th>Costo</th>
         </tr>
-        <tr>
-            <td>Detalle de venta compra</td>
-            <td>0</td>
-            <td>Detalle de venta fecha</td> 
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>Detalle de venta compra</td>
-            <td>0</td>
-            <td>Detalle de venta fecha</td>
-            <td>0</td>
+        <tr ng-repeat="historia in historial">
+            <td>{{historia.Producto_Pedido[$index].Producto.Nombre}}</td>
+            <td>{{historia.Producto_Pedido[$index].Cantidad}}</td>
+            <td>{{historia.Producto_Pedido[$index].Producto.PrecioUnitario}}</td>
+            <td>{{historia.FechaCompra}}</td>
+            <td>${{historia.PrecioTotal}}</td>
         </tr>
     </table>
 </div>

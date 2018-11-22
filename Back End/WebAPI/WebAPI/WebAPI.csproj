@@ -115,6 +115,25 @@
     <Content Include="Resources\Icons\IcoMoon\liga.js" />
     <Content Include="Resources\Icons\MyIcons\MyIcons.css" />
     <Content Include="Resources\Img\Ico\Cineries-Logo.ico" />
+    <Content Include="Resources\Img\ImagenesCartelera\alteredcarbon.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\bettercallsaul.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\bohemian.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\counterpart.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\donniedarko.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\elpadrino.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\fightclub.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\fullmetaljacket.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\granhotelbudapest.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\happy.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\ozark.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\pulpfiction.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\shapeofwater.jpg" />
+    <Content Include="Resources\Img\ImagenesCartelera\strangerthings.jpg" />
+    <Content Include="Resources\Img\ImagenesProductos\Hot-Dog.png" />
+    <Content Include="Resources\Img\ImagenesProductos\Icee.png" />
+    <Content Include="Resources\Img\ImagenesProductos\KitKat.png" />
+    <Content Include="Resources\Img\ImagenesProductos\Palomitas.png" />
+    <Content Include="Resources\Img\ImagenesProductos\Refresco.png" />
     <Content Include="Resources\Img\Png\User\user.png" />
     <Content Include="Resources\Img\Svg\Cineries-Logo.svg" />
     <Content Include="Resources\Js\Angular\angular-idle.js" />
@@ -148,10 +167,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CuponController.cs" />
     <Compile Include="Controllers\FuncionController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PedidoController.cs" />
+    <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Controllers\ProyectableController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Controllers\TokenGenerator.cs" />
