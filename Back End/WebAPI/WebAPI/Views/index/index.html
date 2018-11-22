@@ -45,57 +45,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="background">
-    <section id="LoginModals">
-        <div id="id01" class="modal">
-            <form class="modal-content animate">
-                <div class="imgcontainer">
-                    <img src="../../Resources/Img/Png/User/user.png" alt="Avatar" class="avatar">
-                </div>
-
-                <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" id="txtUserName" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" id="txtPassword" required>
-
-                    <button id="btnLogin">Login</button>
-                </div>
-
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="RemoveModal1()" class="btn btn-outline-danger btn-lg">Cancel</button>
-                    <span class="psw">Forgot <a>password?</a></span>
-                </div>
-            </form>
-        </div>
-        <div id="id02" class="modal">
-            <form class="modal-content animate">
-                <div class="imgcontainer">
-                    <img src="../../Resources/Img/Png/User/user.png" alt="Avatar" class="avatar">
-                </div>
-                <div class="container">
-                    <label for="uname"><b>Nombre</b></label>
-                    <input type="text" placeholder="Ingrese Nombre" name="uname" id="txtName" required>
-                    <label for="ApellPat"><b>Apellido Paterno</b></label>
-                    <input type="text" placeholder="Ingrese Apellido Paterno" name="ApellPat" id="txtPaterno" required>
-                    <label for="ApellMat"><b>Apellido Materno</b></label>
-                    <input type="text" placeholder="Ingrese Apellido Materno" name="ApellMat" id="txtMaterno" required>
-                    <label for="uEmail"><b>Email</b></label>
-                    <input type="text" placeholder="Ingrese Email" name="uEmail" id="txtEmail" required>
-                    <label for="uName"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uName" id="txtUser" required>
-                    <label for="pswrd"><b>Contraseña</b></label>
-                    <input type="password" placeholder="Ingresar Contraseña" name="pswrd" id="txtPass" required>
-                    <label for="uDob"><b>Fecha de Nacimiento</b></label>
-                    <input type="text" placeholder="Ingrese fecha de nacimiento" name="uDob" id="txtDOB" required>
-                    <button id="btnRegistro">Registrarse</button>
-                </div>
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="RemoveModal2()" class="btn btn-outline-danger btn-lg">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </section>
     <header>
         <nav class="navbar bg-PurpleNav navbar-fixed-top">
             <div class="navbar-brand flex-container">
@@ -113,9 +62,62 @@
 
     <main>
         <br />
-        <div ng-app="myApp" style="background-color:white">
-            <div ng-view ng-controller="IndexController">
+        <div ng-app="myApp" ng-controller="IndexController" style="background-color:white">
+            <div ng-view>
             </div>
+            <section id="LoginModals">
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" ng-submit="Login()">
+                        <div class="imgcontainer">
+                            <img src="../../Resources/Img/Png/User/user.png" alt="Avatar" class="avatar">
+                        </div>
+
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input ng-model="user.Username" type="text" placeholder="Enter Username" name="uname" id="txtUserName" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input ng-model="user.Password" type="password" placeholder="Enter Password" name="psw" id="txtPassword" required>
+
+                            <input id="btnLogin" type="submit" value="Login"/>
+                            <!--<button id="btnLogin" ng-click="Login()">Login</button>-->
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="RemoveModal1()" class="btn btn-outline-danger btn-lg">Cancel</button>
+                            <span class="psw">Forgot <a>password?</a></span>
+                        </div>
+                    </form>
+                </div>
+                <div id="id02" class="modal">
+                    <form class="modal-content animate" ng-submit="SignUp()">
+                        <div class="imgcontainer">
+                            <img src="../../Resources/Img/Png/User/user.png" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="container">
+                            <label for="uname"><b>Nombre</b></label>
+                            <input ng-model="userR.Nombre" type="text" placeholder="Ingrese Nombre" name="uname" id="txtName" required>
+                            <label for="ApellPat"><b>Apellido Paterno</b></label>
+                            <input ng-model="userR.ApellidoP" type="text" placeholder="Ingrese Apellido Paterno" name="ApellPat" id="txtPaterno" required>
+                            <label for="ApellMat"><b>Apellido Materno</b></label>
+                            <input ng-model="userR.ApellidoM" type="text" placeholder="Ingrese Apellido Materno" name="ApellMat" id="txtMaterno" required>
+                            <label for="uEmail"><b>Email</b></label>
+                            <input ng-model="userR.Email" type="email" placeholder="Ingrese Email" name="uEmail" id="txtEmail" required>
+                            <label for="uName"><b>Username</b></label>
+                            <input ng-model="userR.Username" type="text" placeholder="Enter Username" name="uName" id="txtUser" required>
+                            <label for="pswrd"><b>Contraseña</b></label>
+                            <input ng-model="userR.Password" type="password" placeholder="Ingresar Contraseña" name="pswrd" id="txtPass" required>
+                            <label for="uDob"><b>Fecha de Nacimiento</b></label>
+                            <input ng-model="userR.FechaNacimiento" type="date" placeholder="Ingrese fecha de nacimiento" name="uDob" id="txtDOB" required>
+                            <!--<button id="btnRegistro">Registrarse</button>-->
+                            <input id="btnRegistro" type="submit" value="Registrarse" />
+                        </div>
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="RemoveModal2()" class="btn btn-outline-danger btn-lg">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </div>
         <br />
     </main>

@@ -41,6 +41,7 @@ namespace WebAPI.Controllers
                 while (reader.Read())
                 {
                     usuario.Id = int.Parse(reader["Id"].ToString());
+                    usuario.Tipo = byte.Parse(reader["Tipo"].ToString());
                 }
 
                 return Ok(usuario);

@@ -1,31 +1,16 @@
 <div class="container cbs">
-    <div class="row justify-content-center"> 
-            <h1>Cartelera</h1>
+    <div class="row justify-content-center">
+        <h1>Cartelera</h1>
     </div>
     <div class="row parent justify-content-center">
-        <div class="child" onclick="Pelicula()">
-            <img class="imageContainer" src="http://placehold.it/300x300">
-            <span class="justify-content-center flex-container">Titulo</span>
+        <div ng-repeat="pelicula in peliculas">
+            <img class="imageContainer" src="http://placehold.it/300x300" />
+            <span class="justify-content-center flex-container">{{ pelicula.Proyectable.Titulo }}</span>
         </div>
-        <div class="child">
-            <img class="imageContainer" src="http://placehold.it/300x300">
-            <span class="justify-content-center flex-container">Titulo</span>
-        </div>
-        <div class="child">
-            <img class="imageContainer" src="http://placehold.it/300x300">
-            <span class="justify-content-center flex-container">Titulo</span>
-        </div>
-        <div class="child">
-            <img class="imageContainer" src="http://placehold.it/300x300">
-            <span class="justify-content-center flex-container">Titulo</span>
-        </div>
-        <div class="child">
-            <img class="imageContainer" src="http://placehold.it/300x300">
-            <span class="justify-content-center flex-container">Titulo</span>
-        </div>
-        <div class="child">
-            <img class="imageContainer" src="http://placehold.it/300x300">
-            <span class="justify-content-center flex-container">Titulo</span>
+
+        <div ng-repeat="episodio in episodios">
+            <img class="imageContainer" src="http://placehold.it/300x300" />
+            <span class="justify-content-center flex-container">{{ episodio.Proyectable.Titulo }}</span>
         </div>
     </div>
 </div>

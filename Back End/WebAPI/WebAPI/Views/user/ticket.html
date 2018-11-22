@@ -5,20 +5,23 @@
     <div class="container ticket-body">
         <div class="row">
             <label class="spanConfiguracion">Titulo</label>
-            <input type="text" class="form-control rounded">
+            <input ng-model="ticket.Titulo" type="text" class="form-control rounded">
+        </div>
+        <div class="row">
+            <label class="spanConfiguracion">Motivo</label>
+            <select ng-model="ticket.Motivo" class="form-control">
+                <option value="Mal servicio">Mal servicio</option>
+                <option value="Devolucion">Devoluci&#243;n</option>
+                <option value="Sugerencia">Sugerencia</option>
+                <option value="Otro">Otro</option>
+            </select>
         </div>
         <div class="row">
             <label class="spanConfiguracion">Descripci&#243;n</label>
-            <textarea class="form-control"></textarea>
-        </div>
-        <div class="row">
-            <label class="spanConfiguracion">Tipo</label>
-            <select class="form-control">
-                <option value="1">Monday</option>
-            </select>
+            <textarea ng-model="ticket.Descripcion" class="form-control"></textarea>
         </div>
         <div class="row justify-content-center">
-            <a class="btn btn-outline-danger btn-lg">Reportar</a>
+            <a class="btn btn-outline-danger btn-lg" ng-click="AgregarTicket()">Reportar</a>
         </div>
     </div>
 </div>

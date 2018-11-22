@@ -1,27 +1,43 @@
-﻿app.controller("IndexController", ['$scope', '$http', '$location', function ($scope, $http, $location) {
+﻿app.controller("IndexController", ['$scope', '$http', '$window', function ($scope, $http, $window) {
+    $scope.user = {};
+    $scope.userR = {};
+
     $scope.Login = function () {
-        var UserData = {
-            Nick: $scope.Nick,
-            Password: $scope.Password
-        };
-        UserData = JSON.stringify(UserData);
         $http({
-            method: 'Post',
-            url: '/api/login/authenticateUser',
-            data: UserData,
-            config
+            method: 'POST',
+            url: '/api/login',
+            data: angular.toJson($scope.user),
+            headers: { "Content-Type": "application/json; charset=utf-8" }
         }).then(function (response) {
-            $location.path('/UserList');
             if ($.trim(response.data)) {
-                localStorage.setItem('token', response.data);
-                $scope.events = [];
-                $scope.idle = 2;
-                $scope.timeout = 6;
+                sessionStorage.setItem('token', response.data);
+                $window.location.href = '/Views/user/userIndex.html';
             }
 
         }, function (error) {
-            console.log(error.data);
-            $scope.error = "Something wrong whith your loging" + data.ExceptionMessage;
+            if (error.status == 404) {
+                // No se encontró el usuario, notificarlo
+            }
+            else {
+                console.log(error.statusText);
+                $scope.error = "Something wrong with your log in" + data.ExceptionMessage;
+            }
         });
     };
+
+    $scope.SignUp = function () {
+        $http({
+            method: 'POST',
+            url: '/api/user',
+            data: angular.toJson($scope.userR),
+            headers: { "Content-Type": "application/json; charset=utf-8" }
+        }).then(function (response) {
+            $scope.user.Username = response.data.Username;
+            $scope.user.Password = response.data.Password;
+            $scope.Login();
+        }, function (error) {
+            console.log(error.statusText);
+            $scope.error = "Something wrong with your sign up" + data.ExceptionMessage;
+        });
+    }
 }]);

@@ -12,5 +12,7 @@ GO
  --SP PARA CONSULTAR LOS TICKETS DE QUEJA
  CREATE PROCEDURE [dbo].[sp_GetTickets]
  AS
-	SELECT * FROM Ticket
+	SELECT T.*, U.Id 'IdUsuario', U.Username
+	FROM Ticket T INNER JOIN Usuario U
+	ON T.IdUsuario = U.Id
  GO
