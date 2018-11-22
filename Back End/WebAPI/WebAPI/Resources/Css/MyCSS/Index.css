@@ -101,6 +101,7 @@ b {
     right: 0;
     left: 0;
     z-index: 1030;
+    top: 0;
 }
 .navbar-fixed-top-edited {
     right: 0;
@@ -318,6 +319,9 @@ b {
     .table-responsivelarge {
         display: block !important;
     }
+    .modalletra {
+        font-size: 14px;
+    }
 }
 @media only screen and (max-width: 822px) and (min-width: 426px) {
     .footer-Icons {
@@ -396,4 +400,46 @@ b {
 .table-responsive {
     overflow-x: auto;
     
+}
+.contentIndex {
+    padding: 25px;
+}
+
+
+/*******PELICULA DETALLES*********/
+.movie-details-main {
+    padding: 42px 36px 106px 244px;
+    position: relative;
+    min-height: 356px;
+}
+
+.content-box-bg, .content-box {
+    border: 1px solid #EFEFEF;
+    padding: 36px;
+}
+.content-box-title {
+    border-bottom: 1px solid #d8d8d8;
+    color: #d0033d;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+}
+.movie-details-info {
+    font-size: 12px;
+    line-height: 14px;
+    overflow: hidden;
+}
+.movie-details-btns {
+    bottom: 42px;
+    overflow: hidden;
+    padding-bottom: 2px;
+    position: absolute;
+    width: 100%;
+}
+.movie-details-cover {
+    position: absolute;
+    top: 42px;
+    left: 36px;
 }
