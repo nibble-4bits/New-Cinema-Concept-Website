@@ -49,9 +49,19 @@ RemoveModal2 = function () {
 
 AparecerMisDatos = function () {
     $("#MisDatos").toggleClass("down");
+    if (!$("#ContentDatos").hasClass("toggled")) {
+        $("#ContentDatos").toggleClass("toggled");
+    } else {
+        parent.location = '#!configuration';
+    }
 };
 SubirRango = function () {
     $("#MiRango").toggleClass("down");
+    if (!$("#ContentRango").hasClass("toggled")) {
+        $("#ContentRango").toggleClass("toggled");
+    } else {
+        parent.location = '#!configuration';
+    }
 };
 
 /*Configuration*/

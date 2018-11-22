@@ -1,10 +1,9 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es">
 <head>
-    <link rel="icon" href="http://example.com/favicon.png">
+    <link rel="icon" href="../../Resources/Img/Ico/Cineries-Logo.ico">
     <title>Cineries</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
     <!--BootStrap CSS-->
 
     <link rel="stylesheet" href="../../Resources/Css/BootStrap/bootstrap.css" crossorigin="anonymous">
@@ -42,90 +41,91 @@
     <!--Google Icons-->
     <link href="../../Resources/Css/Google/GoogleFontIcon.css" rel="stylesheet">
 </head>
-<body class="background">
-    <section id="actions">
-        <div id="wrapper">
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li class="sidebar-brand sidebar-TitleAdmin">
-                        <a href="#" class="TitleLeftBar">
-                            Nick
-                        </a>
-                    </li>
-                    <li class="sidebar-contentAdmin">
-                        <a title="Inicio" href="#!" class="IconLeftBar"><span class="icon icon-home"></span>Inicio</a>
-                    </li>
-                    <li class="sidebar-contentAdmin">
-                        <a title="Reportes" href="#!reportes" class="IconLeftBar"><span class="icon icon-price-tag"></span>Reportes</a>
-                    </li>
-                    <li class="siderbar-LeaveAdmin">
-                        <a title="Cerrar Sesión" href="#" class="IconLeftBar final-bottom"><span class="icon icon-switch"></span>Desconectarme</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <header>
-        <nav class="navbar bg-PurpleNav navbar-fixed-top">
-            <div class="">
-                <a onclick="ShowActions()" class="btn" id="menu-toggle"><i class="material-icons three-lines">menu</i></a>
-                <a class="demo-icon icon-cineries logo textRainbow"></a>
-            </div>
-            <div class="">
-                <div class="navbar-nav">
-                    <a title="Inicio" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-home"></span><p class="textHeaderHide">Inicio</p></a>
-                    <a title="Cerrar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-exit"></span><p class="textHeaderHide">Cerrar Sesion</p></a>
+    <body class="background">
+        <section id="actions">
+            <h3></h3>
+            <div id="wrapper">
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand sidebar-TitleAdmin">
+                            <a href="#" class="TitleLeftBar">
+                                Nick
+                            </a>
+                        </li>
+                        <li class="sidebar-contentAdmin">
+                            <a title="Inicio" href="#!" class="IconLeftBar"><span class="icon icon-home"></span>Inicio</a>
+                        </li>
+                        <li class="sidebar-contentAdmin">
+                            <a title="Reportes" href="#!reportes" class="IconLeftBar"><span class="icon icon-price-tag"></span>Reportes</a>
+                        </li>
+                        <li class="siderbar-LeaveAdmin">
+                            <a title="Cerrar Sesión" href="#" class="IconLeftBar final-bottom"><span class="icon icon-switch"></span>Desconectarme</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <br />
-        <div ng-app="myApp" style="background-color:white">
-            <div ng-view ng-controller="AdminController">
+        </section>
+        <header>
+            <nav class="navbar bg-PurpleNav navbar-fixed-top">
+                <div class="">
+                    <a onclick="ShowActions()" class="btn" id="menu-toggle"><i class="material-icons three-lines">menu</i></a>
+                    <a class="demo-icon icon-cineries logo textRainbow"></a>
+                </div>
+                <div class="">
+                    <div class="navbar-nav">
+                        <a title="Inicio" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-home"></span><p class="textHeaderHide">Inicio</p></a>
+                        <a title="Cerrar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-exit"></span><p class="textHeaderHide">Cerrar Sesion</p></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <br />
+            <div ng-app="myApp" style="background-color:white">
+                <div ng-view ng-controller="AdminController">
 
-            </div>
-        </div>
-        <br />
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="centerMargin" data-aos="flip-down">
-                <a class="demo-icon icon-cineries logo textRainbow"></a>
-            </div>
-            <div class="verticalLine">
-            </div>
-            <div class="footer-content" data-aos="zoom-in">
-                <p class="underline">Soporte</p>
-                <ul>
-                    <li title="Dirección">Dirección: Salle Bajio</li>
-                    <li title="Teléfono">Teléfono: 477-290-5369</li>
-                </ul>
-            </div>
-            <div class="footer-content" data-aos="zoom-in">
-                <p class="underline">Avisos</p>
-                <ul>
-                    <li title="Privacidad">Privacidad</li>
-                    <li title="Terminos">Terminos</li>
-                </ul>
-            </div>
-            <div class="footer-content" data-aos="zoom-in">
-                <p class="underline">Servicios</p>
-                <ul>
-                    <li title="Preguntas">Preguntas Frecuentes</li>
-                    <li title="Email">Cineries@gmail.com</li>
-                </ul>
-            </div>
-            <div class="centerMargin underline-icons ">
-                <div class="footer-Icons">
-                    <a title="Youtube"><span class="icon icon-youtube"></span></a>
-                    <a title="Twitter"><span class="icon icon-twitter"></span></a>
-                    <a title="Instagram"><span class="icon icon-instagram"></span></a>
-                    <a title="Facebook"><span class="icon icon-facebook2"></span></a>
                 </div>
             </div>
+            <br />
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="centerMargin" data-aos="flip-down">
+                    <a class="demo-icon icon-cineries logo textRainbow"></a>
+                </div>
+                <div class="verticalLine">
+                </div>
+                <div class="footer-content" data-aos="zoom-in">
+                    <p class="underline">Soporte</p>
+                    <ul>
+                        <li title="Dirección">Dirección: Salle Bajio</li>
+                        <li title="Teléfono">Teléfono: 477-290-5369</li>
+                    </ul>
+                </div>
+                <div class="footer-content" data-aos="zoom-in">
+                    <p class="underline">Avisos</p>
+                    <ul>
+                        <li title="Privacidad">Privacidad</li>
+                        <li title="Terminos">Terminos</li>
+                    </ul>
+                </div>
+                <div class="footer-content" data-aos="zoom-in">
+                    <p class="underline">Servicios</p>
+                    <ul>
+                        <li title="Preguntas">Preguntas Frecuentes</li>
+                        <li title="Email">Cineries@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="centerMargin underline-icons ">
+                    <div class="footer-Icons">
+                        <a title="Youtube"><span class="icon icon-youtube"></span></a>
+                        <a title="Twitter"><span class="icon icon-twitter"></span></a>
+                        <a title="Instagram"><span class="icon icon-instagram"></span></a>
+                        <a title="Facebook"><span class="icon icon-facebook2"></span></a>
+                    </div>
+                </div>
 
-        </div>
-    </footer>
-</body>
+            </div>
+        </footer>
+    </body>
 </html>

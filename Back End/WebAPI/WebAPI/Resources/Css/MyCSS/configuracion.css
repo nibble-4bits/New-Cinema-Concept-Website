@@ -16,3 +16,88 @@ input[type="radio"] {
     display: inline;
     float: none;
 }
+.subirRango {
+    display: flex;
+    flex-direction: column;
+}
+#ContentRango {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#ContentRango {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#sideContentRango-wrapper {
+    z-index: 1000;
+    position: fixed;
+    overflow-x:hidden;
+    width: 0;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+#ContentRango.toggled #sideContentRango-wrapper {
+    position:unset;
+    width:100%;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+#ContentDatos {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#ContentDatos {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#sideContentDatos-wrapper {
+    z-index: 1000;
+    position: fixed;
+    width: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+#ContentDatos.toggled #sideContentDatos-wrapper {
+    position: unset;
+    width: 100%;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+.icon-play3 {
+
+}

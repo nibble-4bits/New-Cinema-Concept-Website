@@ -36,7 +36,6 @@
     -webkit-animation: imageAnimation 21s linear infinite 0s;
     -moz-animation: imageAnimation 21s linear infinite 0s;
     -o-animation: imageAnimation 21s linear infinite 0s;
-    -ms-animation: imageAnimation 21s linear infinite 0s;
     animation: imageAnimation 21s linear infinite 0s;
 }
 
@@ -52,7 +51,6 @@
         -webkit-animation: titleAnimation 21s linear infinite 0s;
         -moz-animation: titleAnimation 21s linear infinite 0s;
         -o-animation: titleAnimation 21s linear infinite 0s;
-        -ms-animation: titleAnimation 21s linear infinite 0s;
         animation: titleAnimation 21s linear infinite 0s;
     }
 
@@ -72,7 +70,6 @@
         -webkit-animation-delay: 7s;
         -moz-animation-delay: 7s;
         -o-animation-delay: 7s;
-        -ms-animation-delay: 7s;
         animation-delay: 7s;
     }
 
@@ -81,14 +78,12 @@
         -webkit-animation-delay: 14s;
         -moz-animation-delay: 14s;
         -o-animation-delay: 14s;
-        -ms-animation-delay: 14s;
         animation-delay: 14s;
     }
     .cb-slideshow li:nth-child(2) div {
         -webkit-animation-delay: 10s;
         -moz-animation-delay: 10s;
         -o-animation-delay: 10s;
-        -ms-animation-delay: 10s;
         animation-delay: 10s;
     }
 
@@ -96,7 +91,6 @@
         -webkit-animation-delay: 20s;
         -moz-animation-delay: 20s;
         -o-animation-delay: 20s;
-        -ms-animation-delay: 20s;
         animation-delay: 20s;
     }
 
@@ -176,12 +170,10 @@
 @-ms-keyframes imageAnimation {
     0% {
         opacity: 0;
-        -ms-animation-timing-function: ease-in;
     }
 
     8% {
         opacity: 1;
-        -ms-animation-timing-function: ease-out;
     }
 
     17% {
@@ -248,7 +240,6 @@
     -webkit-animation: imageAnimation 21s linear infinite 0s;
     -moz-animation: imageAnimation 21s linear infinite 0s;
     -o-animation: imageAnimation 21s linear infinite 0s;
-    -ms-animation: imageAnimation 21s linear infinite 0s;
     animation: imageAnimation 21s linear infinite 0s;
 }
 
@@ -264,7 +255,6 @@
     -webkit-animation: titleAnimation 21s linear infinite 0s;
     -moz-animation: titleAnimation 21s linear infinite 0s;
     -o-animation: titleAnimation 21s linear infinite 0s;
-    -ms-animation: titleAnimation 21s linear infinite 0s;
     animation: titleAnimation 21s linear infinite 0s;
 }
 
@@ -284,7 +274,6 @@
         -webkit-animation-delay: 7s;
         -moz-animation-delay: 7s;
         -o-animation-delay: 7s;
-        -ms-animation-delay: 7s;
         animation-delay: 7s;
     }
 
@@ -293,14 +282,12 @@
     -webkit-animation-delay: 14s;
     -moz-animation-delay: 14s;
     -o-animation-delay: 14s;
-    -ms-animation-delay: 14s;
     animation-delay: 14s;
 }
 .cb-slideshow li:nth-child(2) div {
     -webkit-animation-delay: 10s;
     -moz-animation-delay: 10s;
     -o-animation-delay: 10s;
-    -ms-animation-delay: 10s;
     animation-delay: 10s;
 }
 
@@ -308,7 +295,6 @@
     -webkit-animation-delay: 20s;
     -moz-animation-delay: 20s;
     -o-animation-delay: 20s;
-    -ms-animation-delay: 20s;
     animation-delay: 20s;
 }
 
@@ -388,12 +374,10 @@
 @-ms-keyframes imageAnimation {
     0% {
         opacity: 0;
-        -ms-animation-timing-function: ease-in;
     }
 
     8% {
         opacity: 1;
-        -ms-animation-timing-function: ease-out;
     }
 
     17% {
