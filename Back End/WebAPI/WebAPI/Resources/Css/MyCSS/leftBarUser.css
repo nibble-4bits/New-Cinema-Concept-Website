@@ -116,3 +116,24 @@ a.final-bottom {
     transform: rotateY(360deg);
     
 }
+
+.loop{
+    animation-iteration-count: 1; 
+}
+
+.Rotation2d:hover {
+    display: inline-block;
+    animation: roll 3s infinite;
+    transform: rotate(30deg);
+    opacity: .7;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

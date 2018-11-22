@@ -93,6 +93,7 @@
   <ItemGroup>
     <Content Include="Resources\Css\AdminIndex.css" />
     <Content Include="Resources\Css\Animate\animate.css" />
+    <Content Include="Resources\Css\Animate\animateOnclicks.css" />
     <Content Include="Resources\Css\BootStrap\bootstrap-grid.css" />
     <Content Include="Resources\Css\BootStrap\bootstrap-grid.min.css" />
     <Content Include="Resources\Css\BootStrap\bootstrap-reboot.css" />
@@ -115,6 +116,26 @@
     <Content Include="Resources\Icons\IcoMoon\liga.js" />
     <Content Include="Resources\Icons\MyIcons\MyIcons.css" />
     <Content Include="Resources\Img\Ico\Cineries-Logo.ico" />
+    <Content Include="Resources\Img\Ico\favicon.ico" />
+    <Content Include="Resources\Img\Jpg\Cartelera\alteredcarbon.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\bettercallsaul.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\bohemian.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\counterpart.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\donniedarko.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\elpadrino.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\fightclub.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\fullmetaljacket.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\granhotelbudapest.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\happy.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\ozark.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\pulpfiction.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\shapeofwater.jpg" />
+    <Content Include="Resources\Img\Jpg\Cartelera\strangerthings.jpg" />
+    <Content Include="Resources\Img\Png\Products\Hot-Dog.png" />
+    <Content Include="Resources\Img\Png\Products\Icee.png" />
+    <Content Include="Resources\Img\Png\Products\KitKat.png" />
+    <Content Include="Resources\Img\Png\Products\Palomitas.png" />
+    <Content Include="Resources\Img\Png\Products\Refresco.png" />
     <Content Include="Resources\Img\Png\User\user.png" />
     <Content Include="Resources\Img\Svg\Cineries-Logo.svg" />
     <Content Include="Resources\Js\Angular\angular-idle.js" />
@@ -197,7 +218,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Resources\Img\Jpg\Admin\" />
     <Folder Include="Resources\Img\Jpg\User\" />
     <Folder Include="Resources\Img\Png\Admin\" />

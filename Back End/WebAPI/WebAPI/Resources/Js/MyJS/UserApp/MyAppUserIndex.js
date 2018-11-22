@@ -26,5 +26,10 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
 
 $(document).ready(function () {
     $('.aniview').AniView();
+
+    //FUNCION PARA EFECTO SHAKE EN ICONOS DE FOOTES
+    $('#lblYoutubeIcon').on('mouseover', function () {
+        $('#lblYoutubeIcon').addClass('animated shake');
+        debugger;
+    });
 });
-   
