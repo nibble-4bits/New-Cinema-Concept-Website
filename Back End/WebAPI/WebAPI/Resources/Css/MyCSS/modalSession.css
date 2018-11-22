@@ -58,25 +58,7 @@ span.psw {
     border: 1px solid #888;
     width: 40%;
 }
-@media only screen and (max-width: 425px) and (min-width: 0px) {
-    
-}
-@media only screen and (min-width:1024px) {
-    .modal-content {
-        background-color: #fefefe;
-        margin: 1% auto 15% auto;
-        border: 1px solid #888;
-        width: 80%;
-    }
-}
-@media only screen and (max-width: 1023px) and (min-width: 0px) {
-    .modal-content {
-        background-color: #fefefe;
-        margin: 1% auto 15% auto;
-        border: 1px solid #888;
-        width: 80%;
-    }
-}
+
 
 /* The Close Button (x) */
 .close {
@@ -164,4 +146,26 @@ span.psw {
             width: 900px;
         }
     }
+}
+
+@media only screen and (min-width: 1024px) {
+    .flex-columnMobile {
+        flex-direction: row !important ;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 60%;
+    }
+
+}
+@media only screen and (max-width: 1024px) {
+    .modal {
+        overflow: scroll;
+    }
+}
+
+.flex-columnMobile {
+    flex-direction: column;
 }
