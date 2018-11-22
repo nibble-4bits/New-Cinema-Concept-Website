@@ -12,31 +12,31 @@
                 </tr>
                 <tr>
                     <th>Tipo Usuario</th>
-                    <th>Fecha</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>Usuarios Platino</td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr ng-repeat="quejaP in quejasPlatinum">
                     <td>Queja</td>
-                    <td>2019-10-18</td>
+                    <td>{{ quejaP.Descripcion }}</td>
                 </tr>
                 <tr>
                     <td>Usuarios Oro</td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr ng-repeat="quejaG in quejasGold">
                     <td>Queja</td>
-                    <td>2019-10-18</td>
+                    <td>{{ quejaG.Descripcion }}</td>
                 </tr>
                 <tr>
                     <td>Usuarios Com&uacute;n</td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr ng-repeat="quejaB in quejasBasico">
                     <td>Queja</td>
-                    <td>2019-10-18</td>
+                    <td>{{ quejaB.Descripcion }}</td>
                 </tr>
             </table>
         </div>

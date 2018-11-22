@@ -10,18 +10,33 @@
                         Ganancias
                     </th>
                     <th>
-                        <select class="form-control">
-                            <option value="1">Monday</option>
+                        <select ng-change="ObtenerGanancias()" ng-model="mesGanancias" class="form-control">
+                            <option value="1">Enero</option>
+                            <option value="2">Februario</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
                         </select>
                     </th>
                 </tr>
                 <tr>
-                    <td>Money</td>
-                    <td>Mes</td>
+                    <td>Alimentos</td>
+                    <td>Boletos</td>
+                </tr>
+                <tr>
+                    <td>${{ totalAlimentos }}</td>
+                    <td>${{ totalBoletos }}</td>
                 </tr>
             </table>
         </div>
-        <div class="row justify-content-center">
+        <!--<div class="row justify-content-center">
             <table class="row justify-content-center table table-responsive table-responsivelarge">
                 <tr>
                     <th>M&aacute;s Consumidas</th>
@@ -40,7 +55,7 @@
                     <td>Terror</td>
                 </tr>
             </table>
-        </div>
+        </div>-->
         <div class="row justify-content-center">
             <table class="row justify-content-center table table-responsive table-responsivelarge">
                 <tr>
