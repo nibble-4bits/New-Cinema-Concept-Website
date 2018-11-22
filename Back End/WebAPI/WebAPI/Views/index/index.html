@@ -85,21 +85,21 @@
                 </form>
             </div>
             <div id="id02" class="modal">
-                <form class="modal-content animate" ng-submit="SignUp()>
+                <form class="modal-content animate">
                     <div class="modal-body d-flex flex-columnMobile flex-space">
                         <div class="d-flex flex-column">
                             <label><b>Nombre</b></label>
-                            <input ng-model="userR.Nombre" type="text" placeholder="Ingrese Nombre" name="uname" id="txtName" required>
+                            <input ng-model="userR.Nombre"  type="text" placeholder="Ingrese Nombre" name="uname" id="txtName" required>
                             <label><b>Apellido Paterno</b></label>
                             <input ng-model="userR.ApellidoP" type="text" placeholder="Ingrese Apellido Paterno" name="ApellPat" id="txtPaterno" required>
                             <label><b>Apellido Materno</b></label>
-                            <input  ng-model="userR.ApellidoM" type="text" placeholder="Ingrese Apellido Materno" name="ApellMat" id="txtMaterno" required>
+                            <input ng-model="userR.ApellidoM" type="text" placeholder="Ingrese Apellido Materno" name="ApellMat" id="txtMaterno" required>
                             <label><b>Email</b></label>
                             <input ng-model="userR.Email" type="email" placeholder="Ingrese Email" name="uEmail" id="txtEmail" required>
                         </div>
                         <div class="d-flex flex-column">
                             <label><b>Username</b></label>
-                            <input ng-model="userR.Username" type="text" placeholder="Enter Username" name="uName" id="txtUser" required>
+                            <input  ng-model="userR.Username" type="text" placeholder="Enter Username" name="uName" id="txtUser" required>
                             <label><b>Contraseña</b></label>
                             <input ng-model="userR.Password" type="password" placeholder="Ingresar Contraseña" name="pswrd" id="txtPass" required>
                             <label><b>Fecha de Nacimiento</b></label>
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="modal-footer" style="background-color:#f1f1f1">
-                        <button type="button"  class="btn btn-outline-danger btn-lg modalButtons">Cancel</button>
+                        <button type="button" onclick="RemoveModal2()" class="btn btn-outline-danger btn-lg modalButtons">Cancel</button>
                         <input id="btnRegistro" type="submit" value="Registrarse" class="btn btn-outline-success btn-lg modalButtons"/>
                     </div>
                 </form>
