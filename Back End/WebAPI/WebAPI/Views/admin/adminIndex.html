@@ -60,7 +60,7 @@
                         <a title="Reportes" href="#!reportes" class="IconLeftBar"><span class="icon icon-price-tag"></span>Reportes</a>
                     </li>
                     <li class="siderbar-LeaveAdmin">
-                        <a title="Cerrar Sesión" href="#" class="IconLeftBar final-bottom"><span class="icon icon-switch"></span>Desconectarme</a>
+                        <a ng-click="Logout()" title="Cerrar Sesión" href="#" class="IconLeftBar final-bottom"><span class="icon icon-switch"></span>Desconectarme</a>
                     </li>
                 </ul>
             </div>
@@ -74,8 +74,8 @@
             </div>
             <div class="">
                 <div class="navbar-nav">
-                    <a title="Inicio" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-home"></span><p class="textHeaderHide">Inicio</p></a>
-                    <a title="Cerrar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-exit"></span><p class="textHeaderHide">Cerrar Sesion</p></a>
+                    <a title="Inicio" class="nav-item nav-link active hoverWhiteNavBar flex-container"><span class="icon icon-home"></span><p class="textHeaderHide">Inicio</p></a>
+                    <a ng-click="Logout()" title="Cerrar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container"><span class="icon icon-exit"></span><p class="textHeaderHide">Cerrar Sesion</p></a>
                 </div>
             </div>
         </nav>
