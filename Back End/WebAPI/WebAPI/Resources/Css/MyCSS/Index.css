@@ -450,3 +450,6 @@ b {
     top: 42px;
     left: 36px;
 }
+a.hoverWhiteNavBar {
+    color: #fed731 !important;
+}

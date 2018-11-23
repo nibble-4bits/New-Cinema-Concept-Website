@@ -34,6 +34,7 @@
     <script src="../../Resources/Js/MyJS/NavBar.js"></script>
     <script src="../../Resources/Js/MyJS/IndexApp/MyAppIndex.js"></script>
     <script src="../../Resources/Js/MyJS/IndexApp/Controller/IndexController.js"></script>
+    <script src="../../Resources/Js/Util/UtilFunctions.js"></script>
     <!--Personal Icons-->
     <link rel="stylesheet" href="../../Resources/Icons/MyIcons/MyIcons.css">
     <!--IcoMoon-->
@@ -43,114 +44,116 @@
     <link href="../../Resources/Css/Google/GoogleFontIcon.css" rel="stylesheet">
 </head>
     <body class="background">
-<body class="background">
-    <header>
-        <nav class="navbar bg-PurpleNav navbar-fixed-top">
-            <div class="navbar-brand flex-container">
-                <a class="demo-icon icon-cineries logo textRainbow"></a>
-            </div>
-            <div style="flex:1;"></div>
-            <div class="">
-                <div class="navbar-nav ml-auto">
-                    <a title="Iniciar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="FirstModal()"><span class="icon icon-user"></span><p class="textHeaderHide">Iniciar Sesión</p></a>
-                    <a title="Registrarme" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="SecondModal()"><span class="icon icon-user-plus"></span><p class="textHeaderHide">Registrarme</p></a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <br />
-        <div ng-app="myApp" ng-controller="IndexController" style="background-color:white">
-            <div ng-view>
-            </div>
-            <section id="LoginModals">
-            <div id="id01" class="modal">
-                <form class="modal-content animate" ng-submit="Login()">
-                    <div class="modal-body">
-                        <div class="d-flex flex-column">
-                            <label><b>Username</b></label>
-                            <input ng-model="user.Username" type="text" placeholder="Enter Username" name="uname" id="txtUserName" required>
-
-                            <label><b>Password</b></label>
-                            <input ng-model="user.Password" type="password" placeholder="Enter Password" name="psw" id="txtPassword" required>
-
-							<input id="btnLogin" class="btn btn-outline-success btn-lg modalButtons" type="submit" value="Login"/>
+        <body class="background">
+            <header>
+                <nav class="navbar bg-PurpleNav navbar-fixed-top">
+                    <div class="navbar-brand flex-container">
+                        <a class="demo-icon icon-cineries logo textRainbow"></a>
+                    </div>
+                    <div style="flex:1;"></div>
+                    <div class="">
+                        <div class="navbar-nav ml-auto">
+                            <a title="Iniciar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="FirstModal()"><span class="icon icon-user"></span><p class="textHeaderHide">Iniciar Sesión</p></a>
+                            <a title="Registrarme" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="SecondModal()"><span class="icon icon-user-plus"></span><p class="textHeaderHide">Registrarme</p></a>
                         </div>
                     </div>
-                    <div class="modal-footer" style="background-color:#f1f1f1">
-                        <button type="button" onclick="RemoveModal1()" class="btn btn-outline-danger btn-lg modalButtons">Cancel</button>
-                        <span class="modalletra"><a>Forgot password?</a></span>
-                    </div>
-                </form>
-            </div>
-            <div id="id02" class="modal">
-                <form class="modal-content animate">
-                    <div class="modal-body d-flex flex-columnMobile flex-space">
-                        <div class="d-flex flex-column">
-                            <label><b>Nombre</b></label>
-                            <input ng-model="userR.Nombre"  type="text" placeholder="Ingrese Nombre" name="uname" id="txtName" required>
-                            <label><b>Apellido Paterno</b></label>
-                            <input ng-model="userR.ApellidoP" type="text" placeholder="Ingrese Apellido Paterno" name="ApellPat" id="txtPaterno" required>
-                            <label><b>Apellido Materno</b></label>
-                            <input ng-model="userR.ApellidoM" type="text" placeholder="Ingrese Apellido Materno" name="ApellMat" id="txtMaterno" required>
-                            <label><b>Email</b></label>
-                            <input ng-model="userR.Email" type="email" placeholder="Ingrese Email" name="uEmail" id="txtEmail" required>
-                        </div>
-                        <div class="d-flex flex-column">
-                            <label><b>Username</b></label>
-                            <input  ng-model="userR.Username" type="text" placeholder="Enter Username" name="uName" id="txtUser" required>
-                            <label><b>Contraseña</b></label>
-                            <input ng-model="userR.Password" type="password" placeholder="Ingresar Contraseña" name="pswrd" id="txtPass" required>
-                            <label><b>Fecha de Nacimiento</b></label>
-                            <input ng-model="userR.FechaNacimiento" type="date" placeholder="Ingrese fecha de nacimiento" name="uDob" id="txtDOB" required>
-                        </div>
-                    </div>
-                    <div class="modal-footer" style="background-color:#f1f1f1">
-                        <button type="button" onclick="RemoveModal2()" class="btn btn-outline-danger btn-lg modalButtons">Cancel</button>
-                        <input id="btnRegistro" type="submit" value="Registrarse" class="btn btn-outline-success btn-lg modalButtons"/>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <footer>
-            <div class="footer">
-                <div class="centerMargin" data-aos="flip-down">
-                    <a class="demo-icon icon-cineries logo textRainbow"></a>
-                </div>
-                <div class="verticalLine">
-                </div>
-                <div class="footer-content" data-aos="zoom-in">
-                    <p class="underline">Soporte</p>
-                    <ul>
-                        <li title="Dirección">Dirección: Salle Bajio</li>
-                        <li title="Teléfono">Teléfono: 477-290-5369</li>
-                    </ul>
-                </div>
-                <div class="footer-content" data-aos="zoom-in">
-                    <p class="underline">Avisos</p>
-                    <ul>
-                        <li title="Privacidad">Privacidad</li>
-                        <li title="Terminos">Terminos</li>
-                    </ul>
-                </div>
-                <div class="footer-content" data-aos="zoom-in">
-                    <p class="underline">Servicios</p>
-                    <ul>
-                        <li title="Preguntas">Preguntas Frecuentes</li>
-                        <li title="Email">Cineries@gmail.com</li>
-                    </ul>
-                </div>
-                <div class="centerMargin underline-icons ">
-                    <div class="footer-Icons">
-                        <a title="Youtube"><span class="icon icon-youtube"></span></a>
-                        <a title="Twitter"><span class="icon icon-twitter"></span></a>
-                        <a title="Instagram"><span class="icon icon-instagram"></span></a>
-                        <a title="Facebook"><span class="icon icon-facebook2"></span></a>
-                    </div>
-                </div>
+                </nav>
+            </header>
 
-            </div>
-        </footer>
-    </body>
+            <main>
+                <br />
+                <div ng-app="myApp" ng-controller="IndexController" style="background-color:white">
+                    <div ng-view>
+                    </div>
+                    <section id="LoginModals">
+                        <div id="id01" class="modal">
+                            <form class="modal-content animate" ng-submit="Login()">
+                                <div class="modal-body">
+                                    <div class="d-flex flex-column">
+                                        <label><b>Username</b></label>
+                                        <input ng-model="user.Username" type="text" placeholder="Enter Username" name="uname" id="txtUserName" required>
+
+                                        <label><b>Password</b></label>
+                                        <input ng-model="user.Password" type="password" placeholder="Enter Password" name="psw" id="txtPassword" required>
+
+                                        <input id="btnLogin" class="btn btn-outline-success btn-lg modalButtons" type="submit" value="Login" />
+                                    </div>
+                                </div>
+                                <div class="modal-footer" style="background-color:#f1f1f1">
+                                    <button type="button" onclick="RemoveModal1()" class="btn btn-outline-danger btn-lg modalButtons">Cancel</button>
+                                    <span class="modalletra"><a>Forgot password?</a></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="id02" class="modal">
+                            <form class="modal-content animate">
+                                <div class="modal-body d-flex flex-columnMobile flex-space">
+                                    <div class="d-flex flex-column">
+                                        <label><b>Nombre</b></label>
+                                        <input ng-model="userR.Nombre" type="text" placeholder="Ingrese Nombre" name="uname" id="txtName" required>
+                                        <label><b>Apellido Paterno</b></label>
+                                        <input ng-model="userR.ApellidoP" type="text" placeholder="Ingrese Apellido Paterno" name="ApellPat" id="txtPaterno" required>
+                                        <label><b>Apellido Materno</b></label>
+                                        <input ng-model="userR.ApellidoM" type="text" placeholder="Ingrese Apellido Materno" name="ApellMat" id="txtMaterno" required>
+                                        <label><b>Email</b></label>
+                                        <input ng-model="userR.Email" type="email" placeholder="Ingrese Email" name="uEmail" id="txtEmail" required>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label><b>Username</b></label>
+                                        <input ng-model="userR.Username" type="text" placeholder="Enter Username" name="uName" id="txtUser" required>
+                                        <label><b>Contraseña</b></label>
+                                        <input ng-model="userR.Password" type="password" placeholder="Ingresar Contraseña" name="pswrd" id="txtPass" required>
+                                        <label><b>Fecha de Nacimiento</b></label>
+                                        <input ng-model="userR.FechaNacimiento" type="date" placeholder="Ingrese fecha de nacimiento" name="uDob" id="txtDOB" required>
+                                    </div>
+                                </div>
+                                <div class="modal-footer" style="background-color:#f1f1f1">
+                                    <button type="button" onclick="RemoveModal2()" class="btn btn-outline-danger btn-lg modalButtons">Cancel</button>
+                                    <input id="btnRegistro" type="submit" value="Registrarse" class="btn btn-outline-success btn-lg modalButtons" />
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <footer>
+                <div class="footer">
+                    <div class="centerMargin" data-aos="flip-down">
+                        <a class="demo-icon icon-cineries logo textRainbow"></a>
+                    </div>
+                    <div class="verticalLine">
+                    </div>
+                    <div class="footer-content" data-aos="zoom-in">
+                        <p class="underline">Soporte</p>
+                        <ul>
+                            <li title="Dirección">Dirección: Salle Bajio</li>
+                            <li title="Teléfono">Teléfono: 477-290-5369</li>
+                        </ul>
+                    </div>
+                    <div class="footer-content" data-aos="zoom-in">
+                        <p class="underline">Avisos</p>
+                        <ul>
+                            <li title="Privacidad">Privacidad</li>
+                            <li title="Terminos">Terminos</li>
+                        </ul>
+                    </div>
+                    <div class="footer-content" data-aos="zoom-in">
+                        <p class="underline">Servicios</p>
+                        <ul>
+                            <li title="Preguntas">Preguntas Frecuentes</li>
+                            <li title="Email">Cineries@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="centerMargin underline-icons ">
+                        <div class="footer-Icons">
+                            <a title="Youtube"><span class="icon icon-youtube"></span></a>
+                            <a title="Twitter"><span class="icon icon-twitter"></span></a>
+                            <a title="Instagram"><span class="icon icon-instagram"></span></a>
+                            <a title="Facebook"><span class="icon icon-facebook2"></span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+        </body>
 </html>

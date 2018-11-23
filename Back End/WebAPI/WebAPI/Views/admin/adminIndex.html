@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" href="../../Resources/Img/Ico/Cineries-Logo.ico">
+    <link rel="shortcut icon" type="image/png" href="../../Resources/Img/Ico/favicon.ico" />
     <title>Cineries</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">s
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--BootStrap CSS-->
-
     <link rel="stylesheet" href="../../Resources/Css/BootStrap/bootstrap.css">
     <!--Animate CS-->
     <link rel="stylesheet" href="../../Resources/Css/Animate/animate.css">
@@ -43,7 +42,7 @@
     <!--Google Icons-->
     <link href="../../Resources/Css/Google/GoogleFontIcon.css" rel="stylesheet">
 </head>
-    <body class="background">
+    <body class="background" ng-app="myApp" ng-controller="AdminController">
         <div id="actions">
             <div id="wrapper">
                 <div id="sidebar-wrapper">
@@ -60,7 +59,7 @@
                             <a title="Reportes" href="#!reportes" class="IconLeftBar"><span class="icon icon-price-tag"></span>Reportes</a>
                         </li>
                         <li class="siderbar-LeaveAdmin">
-                            <a title="Cerrar Sesión" href="#" class="IconLeftBar final-bottom"><span class="icon icon-switch"></span>Desconectarme</a>
+                            <a title="Cerrar Sesión" href="#" class="IconLeftBar final-bottom" onclick="Logout()"><span class="icon icon-switch"></span>Desconectarme</a>
                         </li>
                     </ul>
                 </div>
@@ -75,16 +74,15 @@
                 <div class="">
                     <div class="navbar-nav">
                         <a title="Inicio" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-home"></span><p class="textHeaderHide">Inicio</p></a>
-                        <a title="Cerrar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick=""><span class="icon icon-exit"></span><p class="textHeaderHide">Cerrar Sesion</p></a>
+                        <a title="Cerrar Sesión" class="nav-item nav-link active hoverWhiteNavBar flex-container" onclick="Logout()"><span class="icon icon-exit"></span><p class="textHeaderHide">Cerrar Sesion</p></a>
                     </div>
                 </div>
             </nav>
         </header>
         <main>
             <br />
-            <div ng-app="myApp" style="background-color:white">
-                <div ng-view ng-controller="AdminController">
-
+            <div style="background-color:white">
+                <div ng-view >
                 </div>
             </div>
             <br />
